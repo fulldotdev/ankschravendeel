@@ -1,3 +1,5 @@
+import type { ArticlesProps } from "@/schemas/blocks/articles"
+
 import {
   Author,
   AuthorImage,
@@ -16,21 +18,7 @@ import {
 } from "@/components/ui/tile"
 import { Writeup } from "@/components/ui/writeup"
 
-export interface Articles1Props {
-  children?: React.ReactNode
-  articles?: {
-    href?: string
-    title?: string
-    description?: string
-    image?: {
-      src?: string
-      alt?: string
-    }
-    published?: Date
-  }[]
-}
-
-export default function ({ children, articles }: Articles1Props) {
+export default function ({ children, articles }: ArticlesProps) {
   return (
     <section className="w-full py-16">
       <div className="mx-auto flex max-w-screen-xl flex-col px-4 lg:px-8">

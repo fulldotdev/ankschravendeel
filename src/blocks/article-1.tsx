@@ -1,21 +1,9 @@
-import * as React from "react"
-import type { BlockProps } from "@/schemas/block"
+import type { ArticleProps } from "@/schemas/blocks/article"
 
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
 import { Prose } from "@/components/ui/prose"
 import { Tagline } from "@/components/ui/tagline"
-
-interface Post1Props extends BlockProps {
-  title?: string
-  published?: Date
-  description?: string
-  image?: {
-    src?: string
-    alt?: string
-  }
-  children?: React.ReactNode
-}
 
 export default function ({
   title,
@@ -23,7 +11,7 @@ export default function ({
   description,
   image,
   children,
-}: Post1Props) {
+}: ArticleProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 lg:px-8">

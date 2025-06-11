@@ -1,20 +1,21 @@
-import type { BlockProps } from "@/schemas/block"
+import type { ReviewsProps } from "@/schemas/blocks/reviews"
 
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
-import { Tile, TileContent, TileHeader } from "@/components/ui/tile"
+import { Tile, TileContent, TileHeader, TileImage } from "@/components/ui/tile"
 import { Writeup } from "@/components/ui/writeup"
 import { Rating } from "@/components/rating"
 
-export default function ({ children, reviews }: BlockProps) {
+export default function ({ children, reviews }: ReviewsProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col px-4 lg:px-8">
         <Writeup size="4xl">{children}</Writeup>
         <div className="mt-12 columns-3xs gap-4 space-y-6">
           {reviews?.map(
-            ({ id, title, description, rating = 5, tagline, avatar }) => (
-              <Tile className="break-inside-avoid" key={id}>
+            ({ title, description, rating = 5, tagline, avatar, image }) => (
+              <Tile className="break-inside-avoid" key={title}>
+                <TileImage {...image} />
                 <TileHeader>{rating && <Rating score={rating} />}</TileHeader>
                 <TileContent>
                   <div className="flex w-full gap-4">

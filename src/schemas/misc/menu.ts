@@ -1,4 +1,4 @@
-import { linkSchema } from "@/schemas/link"
+import { linkSchema } from "@/schemas/misc/link"
 
 export const menuSchema = linkSchema
   .extend({

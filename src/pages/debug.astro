@@ -1,17 +1,19 @@
 ---
+import Hero4 from "@/blocks/hero-4"
 import { getEntry } from "astro:content"
-
-import { transformReferences } from "@/lib/transform-references"
 
 const article = await getEntry("articles", "test")
 // const populatedPost = article && (await populateEntryRecursively(article))
 // console.log(populatedPost)
 
-const obj = article && (await transformReferences(article, 3))
+// const obj = article && (await transformReferences(article, 3))
 ---
 
 <html>
   <body>
-    <pre>{JSON.stringify(obj, null, 2)}</pre>
+    <Hero4 {...article}>
+      <p>Hello</p>
+    </Hero4>
+    <pre>{JSON.stringify(article, null, 2)}</pre>
   </body>
 </html>

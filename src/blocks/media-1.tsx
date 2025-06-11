@@ -1,9 +1,9 @@
-import type { BlockProps } from "@/schemas/block"
+import type { MediaProps } from "@/schemas/blocks/media"
 
 import { Button } from "@/components/ui/button"
 import { Writeup } from "@/components/ui/writeup"
 
-export default function ({ children, buttons, image }: BlockProps) {
+export default function ({ children, buttons, image }: MediaProps) {
   return (
     <section className="relative w-full py-16">
       <div className="relative mx-auto grid w-full max-w-screen-xl items-center gap-y-8 px-4 md:grid-cols-2 md:gap-x-8 lg:gap-x-16 lg:px-8">

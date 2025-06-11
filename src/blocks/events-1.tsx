@@ -1,19 +1,10 @@
-import type { BlockProps } from "@/schemas/block"
+import type { EventsProps } from "@/schemas/blocks/events"
 
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
 import { Writeup } from "@/components/ui/writeup"
 
-export interface Events1Props {
-  children?: React.ReactNode
-  events?: {
-    href?: string
-    title?: string
-    description?: string
-  }[]
-}
-
-export default function ({ children, events }: Events1Props) {
+export default function ({ children, events }: EventsProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 md:px-12">

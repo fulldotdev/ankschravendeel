@@ -1,4 +1,4 @@
-import type { ComponentProps } from "astro/types"
+import type { FooterProps } from "@/schemas/blocks/footer"
 
 import { Heading } from "@/components/ui/heading"
 import { Logo } from "@/components/ui/logo"
@@ -6,23 +6,6 @@ import { Paragraph } from "@/components/ui/paragraph"
 import { Social } from "@/components/ui/social"
 import { Channels } from "@/components/channels"
 import { Menu } from "@/components/menu"
-
-export interface Footer1Props {
-  logo?: {
-    src?: string
-    alt?: string
-  }
-  title?: string
-  description?: string
-  channels?: ComponentProps<typeof Channels>
-  socials?: string[]
-  menus?: ComponentProps<typeof Menu>[]
-  links?: {
-    text?: string
-    href?: string
-  }[]
-  copyright?: string
-}
 
 export default function ({
   logo,
@@ -33,7 +16,7 @@ export default function ({
   channels,
   menus,
   copyright,
-}: Footer1Props) {
+}: FooterProps) {
   return (
     <footer className="footer bg-background relative mt-auto w-full justify-end justify-self-end">
       <div className="mx-auto w-full max-w-screen-xl px-4 lg:px-8">

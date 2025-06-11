@@ -1,15 +1,9 @@
+import type { CtaProps } from "@/schemas/blocks/cta"
+
 import { Button } from "@/components/ui/button"
 import { Writeup } from "@/components/ui/writeup"
 
-export interface Cta1Props {
-  children?: React.ReactNode
-  buttons?: {
-    text?: string
-    href?: string
-  }[]
-}
-
-export default function ({ buttons, children }: Cta1Props) {
+export default function ({ buttons, children }: CtaProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto w-full max-w-screen-xl px-4 lg:px-8">

@@ -1,30 +1,11 @@
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import type { ServicesProps } from "@/schemas/blocks/services"
+
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
 import { Tile, TileContent, TileImage } from "@/components/ui/tile"
 import { Writeup } from "@/components/ui/writeup"
 
-interface Services1Props {
-  children?: React.ReactNode
-  services?: {
-    href?: string
-    title?: string
-    description?: string
-    image?: {
-      src?: string
-      alt?: string
-    }
-  }[]
-}
-
-export default function ({ children, services }: Services1Props) {
+export default function ({ children, services }: ServicesProps) {
   return (
     <section className="w-full py-16">
       <div className="mx-auto flex max-w-screen-xl flex-col px-4 lg:px-8">

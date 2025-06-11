@@ -1,21 +1,9 @@
-import type { BlockProps } from "@/schemas/block"
+import type { HeroProps } from "@/schemas/blocks/hero"
 
 import { Button } from "@/components/ui/button"
 import { Writeup } from "@/components/ui/writeup"
 
-export interface Hero4Props {
-  children?: React.ReactNode
-  image?: {
-    src?: string
-    alt?: string
-  }
-  buttons?: {
-    href?: string
-    text?: string
-  }[]
-}
-
-export default async function ({ children, image, buttons }: Hero4Props) {
+export default async function ({ children, image, buttons }: HeroProps) {
   return (
     <section className="bg-background relative min-h-screen w-full py-16">
       <img className="absolute inset-0 size-full object-cover" {...image} />

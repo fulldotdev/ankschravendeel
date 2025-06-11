@@ -1,16 +1,10 @@
-import type { ComponentProps } from "react"
+import type { ContactProps } from "@/schemas/blocks/contact"
 
 import { Writeup } from "@/components/ui/writeup"
 import { AutoForm } from "@/components/auto-form"
 import { Channels } from "@/components/channels"
 
-export interface Contact1Props {
-  children?: React.ReactNode
-  channels?: ComponentProps<typeof Channels>
-  form?: ComponentProps<typeof AutoForm>
-}
-
-export default function ({ children, channels, form }: Contact1Props) {
+export default function ({ children, channels, form }: ContactProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 lg:px-8">

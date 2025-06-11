@@ -1,23 +1,15 @@
+import type { ContentProps } from "@/schemas/blocks/content"
+
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
 import { Prose } from "@/components/ui/prose"
-
-export interface Content1Props {
-  title?: string
-  description?: string
-  image?: {
-    src?: string
-    alt?: string
-  }
-  children?: React.ReactNode
-}
 
 export default function ({
   title,
   description,
   image,
   children,
-}: Content1Props) {
+}: ContentProps) {
   return (
     <section className="relative w-full py-16">
       <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 lg:px-8">

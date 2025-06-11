@@ -1,4 +1,5 @@
 import * as React from "react"
+import type { PostsProps } from "@/schemas/blocks/posts"
 
 import { Badge } from "@/components/ui/badge"
 import { Heading } from "@/components/ui/heading"
@@ -8,18 +9,7 @@ import { Tile, TileContent, TileHeader } from "@/components/ui/tile"
 import { Toggle } from "@/components/ui/toggle"
 import { Writeup } from "@/components/ui/writeup"
 
-export interface Posts1Props {
-  children?: React.ReactNode
-  posts?: {
-    href?: string
-    title?: string
-    description?: string
-    published?: Date
-    tags?: string[]
-  }[]
-}
-
-export default function Posts1({ children, posts }: Posts1Props) {
+export default function ({ children, posts }: PostsProps) {
   // Collect all tags from posts, flatten, and deduplicate
   const allTags = posts?.flatMap(({ tags }) => tags)
   const uniqueTags = [...new Set(allTags)].filter((tag) => tag !== undefined)

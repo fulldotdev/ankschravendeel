@@ -1,6 +1,5 @@
 ---
 title: De geest laten opbloeien
-article: test
 ---
 
 Als ik ’s morgens wakker word, hoor ik mijn denkmotor aanslaan. Gedachten die op zaken vooruit lopen, wat er gepland staat voor die dag komt alvast langs. Overzicht maken, voorbereidend denken. Ergens naar uit kijken of tegen op zien, onbewuste spanning vertaalt zich in verdwalen in verhalen.
