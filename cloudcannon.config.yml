@@ -8,9 +8,11 @@ collection_groups:
   - heading: Content
     collections:
       - pages
-      - articles
+      - services
       - events
-      - blogs
+      - posts
+      - articles
+      - persons
       - policies
 
 collections_config:
@@ -23,6 +25,15 @@ collections_config:
     _enabled_editors:
       - visual
       - content
+  services:
+    name: Diensten
+    path: src/content/services
+    url: /services/[full_slug]/
+    disable_file_actions: true
+    disable_add_folder: true
+    _enabled_editors:
+      - content
+      - visual
   articles:
     name: Artikelen
     path: src/content/articles
@@ -31,14 +42,6 @@ collections_config:
     disable_add_folder: true
     _enabled_editors:
       - content
-  blogs:
-    name: Blogs
-    path: src/content/blogs
-    icon: newspaper
-    disable_file_actions: true
-    disable_add_folder: true
-    _enabled_editors:
-      - data
   events:
     name: Agenda
     path: src/content/events
@@ -48,6 +51,22 @@ collections_config:
     disable_add_folder: true
     _enabled_editors:
       - content
+  posts:
+    name: Lezingen
+    path: src/content/posts
+    url: /posts/[full_slug]/
+    icon: post
+    disable_file_actions: true
+    disable_add_folder: true
+    _enabled_editors:
+      - content
+  persons:
+    name: Personen
+    path: src/content/persons
+    url: /persons/[full_slug]/
+    icon: person
+    disable_file_actions: true
+    disable_add_folder: true
   policies:
     name: Beleid
     path: src/content/policies

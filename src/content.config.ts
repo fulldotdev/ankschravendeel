@@ -1,8 +1,9 @@
+import { defineCollection } from "astro:content"
+import { file, glob } from "astro/loaders"
+
 import { dataSchema } from "@/schemas/data"
 import { layoutSchema } from "@/schemas/layout"
 import { pageSchema } from "@/schemas/page"
-import { defineCollection } from "astro:content"
-import { file, glob } from "astro/loaders"
 
 export const collections = {
   pages: defineCollection({
@@ -57,12 +58,5 @@ export const collections = {
   reviews: defineCollection({
     loader: file("src/content/reviews.yml"),
     schema: dataSchema,
-  }),
-  layouts: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{yml,yaml,json}",
-      base: `./src/content/layouts`,
-    }),
-    schema: layoutSchema,
   }),
 }
