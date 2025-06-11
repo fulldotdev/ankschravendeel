@@ -77,6 +77,22 @@ collections_config:
 data_config:
   reviews:
     path: src/content/reviews.yml
+  settings:
+    path: src/data/settings.json
+
+collection_groups:
+  - heading: Pagina's
+    collections:
+      - pages
+      - services
+      - events
+      - posts
+      - persons
+      - policies
+  - heading: Data
+    collections:
+      - reviews
+      - settings
 
 _enabled_editors:
   - visual
