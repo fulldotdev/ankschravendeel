@@ -72,8 +72,7 @@ collection_groups:
       - policies
   - heading: Data
     collections:
-      - reviews
-      - settings
+      - data
 
 _enabled_editors:
   - visual
