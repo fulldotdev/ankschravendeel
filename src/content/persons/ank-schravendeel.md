@@ -14,6 +14,7 @@ buttons:
   - text: Stuur een bericht
     href: "#form"
 form:
+  inbox: ankschravendeel
   action: /bedankt/
   fields:
     - type: text
