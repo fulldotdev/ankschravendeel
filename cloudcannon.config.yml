@@ -4,17 +4,6 @@ paths:
   static: public
   uploads: public/images
 
-collection_groups:
-  - heading: Content
-    collections:
-      - pages
-      - services
-      - events
-      - posts
-      - articles
-      - persons
-      - policies
-
 collections_config:
   pages:
     name: Pagina's
@@ -88,6 +77,11 @@ collections_config:
 data_config:
   reviews:
     path: src/content/reviews.yml
+
+_enabled_editors:
+  - visual
+  - content
+  - data
 
 _inputs:
   block:
