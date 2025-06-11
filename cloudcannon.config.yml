@@ -112,3 +112,7 @@ _inputs:
     type: textarea
   content:
     type: html
+  reviews:
+    type: multiselect
+    options:
+      values: _select_data.reviews
