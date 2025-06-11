@@ -7,64 +7,53 @@ paths:
 collections_config:
   pages:
     name: Pagina's
-    path: src/content/pages
     url: /[full_slug]/
+    path: src/content/pages
     icon: web
     disable_file_actions: true
-    _enabled_editors:
-      - visual
-      - content
+    disable_add_folder: true
   services:
-    name: Diensten
+    name: Aanbod
+    url: /aanbod/[full_slug]/
     path: src/content/services
-    url: /services/[full_slug]/
+    icon: design_services
     disable_file_actions: true
     disable_add_folder: true
-    _enabled_editors:
-      - content
-      - visual
   articles:
     name: Artikelen
+    url: /artikelen/[full_slug]/
     path: src/content/articles
     icon: news
     disable_file_actions: true
     disable_add_folder: true
-    _enabled_editors:
-      - content
   events:
     name: Agenda
+    url: /agenda/[full_slug]/
     path: src/content/events
-    url: /events/[full_slug]/
     icon: calendar_month
     disable_file_actions: true
     disable_add_folder: true
-    _enabled_editors:
-      - content
   posts:
     name: Lezingen
+    url: /lezingen/[full_slug]/
     path: src/content/posts
-    url: /posts/[full_slug]/
     icon: post
     disable_file_actions: true
     disable_add_folder: true
-    _enabled_editors:
-      - content
   persons:
     name: Personen
+    url: /personen/[full_slug]/
     path: src/content/persons
-    url: /persons/[full_slug]/
     icon: person
     disable_file_actions: true
     disable_add_folder: true
   policies:
     name: Beleid
+    url: /beleid/[full_slug]/
     path: src/content/policies
-    url: /policies/[full_slug]/
     icon: policy
     disable_file_actions: true
     disable_add_folder: true
-    _enabled_editors:
-      - content
 
 data_config:
   reviews:
