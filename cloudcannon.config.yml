@@ -65,14 +65,6 @@ collections_config:
     disable_add_folder: true
     _enabled_editors:
       - content
-  reviews:
-    name: Beoordelingen
-    path: src/content/reviews.yml
-    icon: star
-    disable_file_actions: true
-    disable_add_folder: true
-    _enabled_editors:
-      - data
 
 data_config:
   reviews:
