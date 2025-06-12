@@ -6,6 +6,7 @@ blocks:
       <h1>Neem gerust contact met mij op</h1>
       <p>Neem gerust contact met mij op, stel je vraag via onderstaand contactformulier, of geef me een seintje of telefoontje</p>
     form:
+      inbox: ankschravendeel
       fields:
         - type: text
           label: Naam
