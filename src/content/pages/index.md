@@ -43,6 +43,10 @@ blocks:
   - block: reviews-1
     content: |
       <h2>Wat anderen zeggen</h2>
+    reviews:
+      - src/content/reviews/mevr-h.md
+      - src/content/reviews/coach.md
+      - src/content/reviews/beleidsmedewerker-zorg.md
   - block: cta-1
     content: |
       <h2>Neem gerust contact met mij op</h2>

@@ -56,7 +56,10 @@ export const collections = {
     schema: pageSchema,
   }),
   reviews: defineCollection({
-    loader: file("src/content/reviews.yml"),
+    loader: glob({
+      pattern: "**/[^_]*.{md,mdx}",
+      base: "src/content/reviews",
+    }),
     schema: dataSchema,
   }),
 }

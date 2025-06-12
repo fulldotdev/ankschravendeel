@@ -54,15 +54,23 @@ collections_config:
     icon: policy
     disable_file_actions: true
     disable_add_folder: true
-
-data_config:
   reviews:
+    name: Reviews
+    url: /reviews/[full_slug]/
     path: src/content/reviews.yml
-  settings:
-    path: src/data/settings.json
+    icon: star
+    disable_file_actions: true
+    disable_add_folder: true
+  data:
+    name: Data
+    path: src/data
+    icon: data_object
+    disable_file_actions: true
+    disable_add_folder: true
+    disable_add: true
 
 collection_groups:
-  - heading: Pagina's
+  - heading: Content
     collections:
       - pages
       - services
@@ -70,7 +78,8 @@ collection_groups:
       - posts
       - persons
       - policies
-  - heading: Data
+      - reviews
+  - heading: Settings
     collections:
       - data
 
