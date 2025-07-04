@@ -75,6 +75,7 @@ function AutoForm({ inbox, fields, submit, className, ...props }: Props) {
       <form
         data-netlify="true"
         method="POST"
+        action={"/bedankt/"}
         className={cn("flex w-full max-w-2xl flex-col gap-6", className)}
         {...props}
       >

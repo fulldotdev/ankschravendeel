@@ -1,6 +1,7 @@
 import react from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
 import tailwindcss from "@tailwindcss/vite"
+import favicons from "astro-favicons"
 import robotsTxt from "astro-robots-txt"
 import { defineConfig, fontProviders } from "astro/config"
 
@@ -34,7 +35,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  integrations: [robotsTxt(), sitemap(), react(), integration()],
+  integrations: [robotsTxt(), sitemap(), react(), integration(), favicons()],
   vite: {
     plugins: [tailwindcss()],
   },

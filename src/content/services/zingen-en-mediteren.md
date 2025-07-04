@@ -67,7 +67,3 @@ Ank begeleidt vipassana meditatie sinds 2007 en ontwikkelde zingen als een vorm 
 Voertaal: Nederlands en Engels (met mogelijkheid tot vertaling)
 
 Als je meer informatie wilt over de stijl van zingen: website Arman: <a href="https://www.meditativesoundscape.com" target="_blank" rel="noreferrer noopener">https://www.meditativesoundscape.com</a>.
-
-We maakten een podcast over onze verkenningstocht van het afgelopen jaar. [Link toevoegen](#)
-
-Er is een opname van een aantal mantra’s, zodat je mee kunt zingen. [Link toevoegen, wordt nog geleverd](#)
