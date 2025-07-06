@@ -9,9 +9,9 @@ blocks:
     content: |
       <h2>Wat anderen zeggen over mijn coaching</h2>
     reviews:
-      - mevr-h
-      - coach
-      - beleidsmedewerker-zorg
+      - /src/content/reviews/mevr-h.md
+      - /src/content/reviews/coach.md
+      - /src/content/reviews/beleidsmedewerker-zorg.md
 seo:
   title: Coaching | Persoonlijke & Professionele Coaching door Ank Schravendeel
   description: >-
