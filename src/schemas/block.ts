@@ -3,7 +3,7 @@ import { imageSchema } from "@/schemas/image"
 import { linkSchema } from "@/schemas/link"
 import { menuSchema } from "@/schemas/menu"
 import { seoSchema } from "@/schemas/seo"
-import { reference, z } from "astro:content"
+import { reference, z, type CollectionKey } from "astro:content"
 
 export const itemSchema = z
   .object({
@@ -34,6 +34,16 @@ export type ItemProps = Omit<ItemSchema, "content"> & {
   children?: React.ReactNode
 }
 
+const pathSchema = <C extends CollectionKey>(collection: C) => {
+  return z.preprocess((value) => {
+    if (typeof value !== "string") return value
+    const path = value.split(`/${collection}/`)[1]
+    if (!path) return value
+    const id = path.split(".")[0]
+    return id
+  }, reference(collection))
+}
+
 export const blockSchema = itemSchema
   .extend({
     block: z.string(),
@@ -43,12 +53,12 @@ export const blockSchema = itemSchema
     // Items
     items: itemSchema.array(),
     // References
-    posts: reference("posts").array(),
-    articles: reference("articles").array(),
-    services: reference("services").array(),
-    events: reference("events").array(),
-    reviews: reference("reviews").array(),
-    person: reference("persons"),
+    posts: pathSchema("posts").array(),
+    articles: pathSchema("articles").array(),
+    services: pathSchema("services").array(),
+    events: pathSchema("events").array(),
+    reviews: pathSchema("reviews").array(),
+    person: pathSchema("persons"),
   })
   .partial()
 

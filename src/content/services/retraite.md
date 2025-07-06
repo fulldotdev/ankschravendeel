@@ -9,10 +9,10 @@ blocks:
     content: |
       <h2>Wat anderen zeggen over het volgen van een retraite</h2>
     reviews:
-      - src/content/reviews/deelnemer-1.md
-      - src/content/reviews/deelnemer-2.md
-      - src/content/reviews/deelnemer-3.md
-      - src/content/reviews/deelnemer-4.md
+      - /src/content/reviews/deelnemer-1.md
+      - /src/content/reviews/deelnemer-2.md
+      - /src/content/reviews/deelnemer-3.md
+      - /src/content/reviews/deelnemer-4.md
 seo:
   title: Meditatie Retraite | Verdiep je Meditatie met Ank Schravendeel
   description: >-
