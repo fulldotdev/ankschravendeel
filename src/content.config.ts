@@ -1,65 +1,25 @@
 import { defineCollection } from "astro:content"
-import { file, glob } from "astro/loaders"
+import { glob } from "astro/loaders"
+import config from "fulldev.config.json"
+import { mapValues } from "remeda"
 
-import { dataSchema } from "@/schemas/data"
-import { layoutSchema } from "@/schemas/layout"
-import { pageSchema } from "@/schemas/page"
+import { entrySchema, formSchema } from "@/lib/schemas"
 
 export const collections = {
-  pages: defineCollection({
+  forms: defineCollection({
     loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/pages",
+      pattern: "**/[^_]*.{yml,yaml}",
+      base: "src/content/forms",
     }),
-    schema: pageSchema,
+    schema: formSchema,
   }),
-  posts: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/posts",
-    }),
-    schema: pageSchema,
-  }),
-  articles: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/articles",
-    }),
-    schema: pageSchema,
-  }),
-  events: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/events",
-    }),
-    schema: pageSchema,
-  }),
-  services: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/services",
-    }),
-    schema: pageSchema,
-  }),
-  policies: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/policies",
-    }),
-    schema: pageSchema,
-  }),
-  persons: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/persons",
-    }),
-    schema: pageSchema,
-  }),
-  reviews: defineCollection({
-    loader: glob({
-      pattern: "**/[^_]*.{md,mdx}",
-      base: "src/content/reviews",
-    }),
-    schema: dataSchema,
-  }),
+  ...mapValues(config, (_, collection) =>
+    defineCollection({
+      loader: glob({
+        pattern: "**/[^_]*.{md,mdx}",
+        base: `src/content/${collection}`,
+      }),
+      schema: entrySchema,
+    })
+  ),
 }

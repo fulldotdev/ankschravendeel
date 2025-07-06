@@ -5,14 +5,14 @@ image:
   src: /images/zingen-en-mediteren.jpeg
 blocks:
   - block: reviews-1
-    content: |
+    children: |
       <h2>Wat anderen zeggen over zingen en mediteren</h2>
     reviews:
-      - src/content/reviews/deelnemer-5.md
-      - src/content/reviews/deelnemer-6.md
-      - src/content/reviews/deelnemer-7.md
-      - src/content/reviews/deelnemer-8.md
-      - src/content/reviews/deelnemer-9.md
+      - /src/content/reviews/deelnemer-5.md
+      - /src/content/reviews/deelnemer-6.md
+      - /src/content/reviews/deelnemer-7.md
+      - /src/content/reviews/deelnemer-8.md
+      - /src/content/reviews/deelnemer-9.md
 seo:
   title: Zingen en mediteren | Meditatie door Zang met Ank Schravendeel
   description: >-

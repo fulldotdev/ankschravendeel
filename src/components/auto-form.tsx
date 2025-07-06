@@ -1,10 +1,7 @@
-import { format } from "date-fns"
-import { CalendarIcon } from "lucide-react"
 import { useForm } from "react-hook-form"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
 import {
   FormControl,
   FormDescription,
@@ -16,227 +13,212 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 
-interface Props extends React.FormHTMLAttributes<HTMLFormElement> {
-  inbox?: string
-  submit?: string
-  fields?: {
-    name?: string
+function AutoFormInput({
+  control,
+  name,
+  placeholder,
+  required,
+  disabled,
+  type,
+  label,
+  description,
+}: Pick<React.ComponentProps<typeof FormField>, "control" | "name"> &
+  Pick<
+    React.ComponentProps<typeof Input>,
+    "placeholder" | "required" | "disabled" | "type"
+  > & {
     label?: string
-    placeholder?: string
     description?: string
-    required?: boolean
-    options?: string[]
-    redirect?: string
-    type?:
-      | "text"
-      | "email"
-      | "tel"
-      | "number"
-      | "date"
-      | "checkbox"
-      | "select"
-      | "textarea"
-      | "address"
-    disabled?: {
-      mon?: boolean
-      tue?: boolean
-      wed?: boolean
-      thu?: boolean
-      fri?: boolean
-      sat?: boolean
-      sun?: boolean
-      future?: boolean
-      past?: boolean
-      today?: boolean
-      dates?: string[]
-    }
-  }[]
+  }) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>{label}</FormLabel>
+          <FormControl>
+            <Input
+              placeholder={placeholder}
+              required={required}
+              disabled={disabled}
+              type={type}
+              {...field}
+            />
+          </FormControl>
+          <FormDescription>{description}</FormDescription>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  )
 }
 
-function AutoForm({ inbox, fields, submit, className, ...props }: Props) {
-  const form = useForm()
+function AutoFormTextarea({
+  control,
+  name,
+  label,
+  description,
+  placeholder,
+  required,
+  disabled,
+}: Pick<React.ComponentProps<typeof FormField>, "control" | "name"> &
+  Pick<
+    React.ComponentProps<typeof Textarea>,
+    "placeholder" | "required" | "disabled"
+  > & {
+    label?: string
+    description?: string
+  }) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>{label}</FormLabel>
+          <FormControl>
+            <Textarea
+              className="resize-vertical"
+              placeholder={placeholder}
+              required={required}
+              disabled={disabled}
+              {...field}
+            />
+          </FormControl>
+          <FormDescription>{description}</FormDescription>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  )
+}
 
-  return fields ? (
+function AutoFormSelect({
+  control,
+  name,
+  label,
+  description,
+  options,
+  placeholder,
+  required,
+  disabled,
+}: Pick<React.ComponentProps<typeof FormField>, "control" | "name"> &
+  Pick<React.ComponentProps<typeof Select>, "required" | "disabled"> & {
+    label?: string
+    description?: string
+    options?: string[]
+    placeholder?: string
+  }) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>{label}</FormLabel>
+          <Select
+            required={required}
+            disabled={disabled}
+            onValueChange={field.onChange}
+            defaultValue={field.value}
+          >
+            <FormControl>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder={placeholder} />
+              </SelectTrigger>
+            </FormControl>
+            <SelectContent>
+              {options?.map((option) => (
+                <SelectItem key={option} value={option}>
+                  {option}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <FormDescription>{description}</FormDescription>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  )
+}
+
+interface Props extends React.ComponentProps<"form"> {
+  inbox?: string
+  fields?: (
+    | ({
+        type: "text" | "email" | "tel" | "number"
+      } & React.ComponentProps<typeof AutoFormInput>)
+    | ({
+        type: "textarea"
+      } & React.ComponentProps<typeof AutoFormTextarea>)
+    | ({
+        type: "select"
+      } & React.ComponentProps<typeof AutoFormSelect>)
+  )[]
+  submit?: string
+  description?: string
+}
+
+const fieldComponents = {
+  text: AutoFormInput,
+  email: AutoFormInput,
+  tel: AutoFormInput,
+  number: AutoFormInput,
+  textarea: AutoFormTextarea,
+  select: AutoFormSelect,
+}
+
+function AutoForm({
+  inbox,
+  fields,
+  submit,
+  className,
+  description,
+  ...props
+}: Props) {
+  const form = useForm()
+  return (
     <FormRoot {...form}>
       <form
         data-netlify="true"
         method="POST"
-        action={"/bedankt/"}
         className={cn("flex w-full max-w-2xl flex-col gap-6", className)}
         {...props}
       >
+        {/* Cloudcannon fields */}
         {inbox && <input type="hidden" name="inbox_key" value={inbox} />}
         <input type="text" name="_gotcha" style={{ display: "none" }} />
+        {/* Always include the page path in the form data */}
         <input
           type="text"
-          name="page"
+          name="Pagina"
           value={typeof window !== "undefined" ? window.location.pathname : ""}
           style={{ display: "none" }}
         />
-        {fields?.map(
-          ({
-            type,
-            name,
-            label,
-            placeholder,
-            description,
-            required,
-            options,
-            disabled,
-          }) =>
-            (name || label) && (
-              <FormField
-                key={name}
-                control={form.control}
-                name={name || label || ""}
-                render={({ field }) => (
-                  <FormItem className="w-full">
-                    <FormLabel>{label}</FormLabel>
-                    <FormControl>
-                      {(() => {
-                        if (type === "date") {
-                          return (
-                            <>
-                              <Popover>
-                                <PopoverTrigger asChild>
-                                  <Button
-                                    variant="outline"
-                                    className={cn(
-                                      "w-full justify-start text-left font-normal",
-                                      !field.value && "text-muted-foreground"
-                                    )}
-                                  >
-                                    <CalendarIcon className="mr-2 h-4 w-4" />
-                                    {field.value ? (
-                                      format(field.value, "LLL dd, yyyy")
-                                    ) : (
-                                      <span>Pick a date</span>
-                                    )}
-                                  </Button>
-                                </PopoverTrigger>
-                                <PopoverContent
-                                  className="w-auto p-0"
-                                  align="start"
-                                >
-                                  <Calendar
-                                    mode="single"
-                                    selected={field.value}
-                                    onSelect={field.onChange}
-                                    disabled={(date) => {
-                                      const day = date.getDay()
-                                      const today = new Date()
-                                      today.setHours(0, 0, 0, 0)
-
-                                      const formatDate = (d: Date) =>
-                                        d.toISOString().split("T")[0]
-
-                                      return Boolean(
-                                        (disabled?.mon && day === 1) ||
-                                          (disabled?.tue && day === 2) ||
-                                          (disabled?.wed && day === 3) ||
-                                          (disabled?.thu && day === 4) ||
-                                          (disabled?.fri && day === 5) ||
-                                          (disabled?.sat && day === 6) ||
-                                          (disabled?.sun && day === 0) ||
-                                          (disabled?.future && date > today) ||
-                                          (disabled?.past && date < today) ||
-                                          (disabled?.today &&
-                                            date.getTime() ===
-                                              today.getTime()) ||
-                                          (disabled?.dates &&
-                                            disabled.dates.includes(
-                                              formatDate(date)
-                                            ))
-                                      )
-                                    }}
-                                    initialFocus
-                                  />
-                                </PopoverContent>
-                              </Popover>
-                              {field.value && (
-                                <input
-                                  type="hidden"
-                                  name={name || label || ""}
-                                  value={
-                                    field.value.toISOString().split("T")[0]
-                                  }
-                                />
-                              )}
-                            </>
-                          )
-                        } else if (type === "select") {
-                          return (
-                            <>
-                              <Select onValueChange={field.onChange}>
-                                <SelectTrigger>
-                                  <SelectValue placeholder={placeholder} />
-                                </SelectTrigger>
-                                <SelectContent>
-                                  <SelectGroup>
-                                    {options?.map((option) => (
-                                      <SelectItem key={option} value={option}>
-                                        {option}
-                                      </SelectItem>
-                                    ))}
-                                  </SelectGroup>
-                                </SelectContent>
-                              </Select>
-                              {field.value && (
-                                <input
-                                  type="hidden"
-                                  name={name || label || ""}
-                                  value={field.value}
-                                />
-                              )}
-                            </>
-                          )
-                        } else if (type === "textarea") {
-                          return (
-                            <Textarea
-                              required={required}
-                              placeholder={placeholder || undefined}
-                              {...field}
-                            />
-                          )
-                        } else {
-                          return (
-                            <Input
-                              type={type}
-                              required={required}
-                              placeholder={placeholder || undefined}
-                              {...field}
-                            />
-                          )
-                        }
-                      })()}
-                    </FormControl>
-                    <FormDescription>{description}</FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            )
-        )}
+        {/* Fields definitions */}
+        {fields?.map(({ type, ...field }) => {
+          const Field = fieldComponents[type]
+          return <Field control={form.control} {...field} />
+        })}
         <Button className="flex" type="submit">
           {submit}
         </Button>
+        {description && (
+          <p className="text-muted-foreground text-sm">{description}</p>
+        )}
       </form>
     </FormRoot>
-  ) : null
+  )
 }
 
-export { AutoForm }
+export { AutoFormInput, AutoFormTextarea, AutoFormSelect, AutoForm }

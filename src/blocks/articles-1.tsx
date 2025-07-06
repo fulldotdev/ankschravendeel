@@ -1,73 +1,63 @@
+import { ArrowRightIcon, CalendarIcon } from "lucide-react"
+
+import type { BlockProps } from "@/lib/types"
+import { Link } from "@/components/ui/link"
 import {
-  Author,
-  AuthorImage,
-  AuthorTagline,
-  AuthorTitle,
-} from "@/components/ui/author"
-import { Heading } from "@/components/ui/heading"
-import { Paragraph } from "@/components/ui/paragraph"
-import { Tagline } from "@/components/ui/tagline"
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionGrid,
+} from "@/components/ui/section"
 import {
   Tile,
   TileContent,
-  TileFooter,
-  TileHeader,
+  TileDescription,
   TileImage,
+  TileTitle,
 } from "@/components/ui/tile"
-import { Writeup } from "@/components/ui/writeup"
 
-export interface Articles1Props {
-  children?: React.ReactNode
-  articles?: {
-    href?: string
-    title?: string
-    description?: string
-    image?: {
-      src?: string
-      alt?: string
-    }
-    published?: Date
-  }[]
-}
-
-export default function ({ children, articles }: Articles1Props) {
+export default function ({ children, items, link }: BlockProps) {
   return (
-    <section className="w-full py-16">
-      <div className="mx-auto flex max-w-screen-xl flex-col px-4 lg:px-8">
+    <Section>
+      <SectionContainer className="flex flex-col items-center">
         {children && (
-          <Writeup className="mb-12" size="3xl">
+          <SectionContent className="text-center" size="lg">
             {children}
-          </Writeup>
+          </SectionContent>
         )}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {articles?.map(({ href, title, description, image, published }) => (
-            <Tile key={href} href={href} panel={false} className="gap-2">
-              <TileImage className="aspect-4/3 object-cover" {...image} />
-              <TileHeader className="mt-2">
-                <Tagline size="xs">
-                  {published?.toLocaleDateString("nl-NL")}
-                </Tagline>
-              </TileHeader>
-              <TileContent className="mt-0">
-                <Heading as="h3" size="lg">
-                  {title}
-                </Heading>
-                <Paragraph size="sm">{description}</Paragraph>
+        {link && (
+          <Link
+            className="not-first:mt-4"
+            href={link.href}
+            variant="link"
+            size="lg"
+          >
+            {link.text}
+            <ArrowRightIcon />
+          </Link>
+        )}
+        <SectionGrid className="grid-cols-[repeat(auto-fit,minmax(300px,1fr))] not-first:mt-16">
+          {items?.map(({ href, title, description, image, published }, i) => (
+            <Tile key={i} href={href}>
+              {image && (
+                <TileImage className="aspect-4/3 object-cover" {...image} />
+              )}
+              <TileContent>
+                {published && (
+                  <p className="inline-flex items-center gap-2 text-xs leading-none font-medium">
+                    <CalendarIcon className="size-[1em]" />
+                    {new Date(published).toLocaleDateString("nl-NL")}
+                  </p>
+                )}
+                <TileTitle className="mt-1 text-lg">{title}</TileTitle>
+                {description && (
+                  <TileDescription>{description}</TileDescription>
+                )}
               </TileContent>
-              {/* <TileFooter>
-                <Author>
-                  <AuthorImage
-                    src={person?.avatar}
-                    alt={`${person?.title} ${person?.tagline}`}
-                  />
-                  <AuthorTitle>{person.title}</AuthorTitle>
-                  <AuthorTagline>{person.tagline}</AuthorTagline>
-                </Author>
-              </TileFooter> */}
             </Tile>
           ))}
-        </div>
-      </div>
-    </section>
+        </SectionGrid>
+      </SectionContainer>
+    </Section>
   )
 }

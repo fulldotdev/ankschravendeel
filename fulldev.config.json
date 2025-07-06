@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "slug": "",
+    "block": "content-1"
+  },
+  "posts": {},
+  "articles": {
+    "slug": "blog",
+    "block": "article-1"
+  },
+  "services": {
+    "slug": "aanbod",
+    "block": "article-1"
+  },
+  "events": {
+    "slug": "agenda",
+    "block": "article-1"
+  },
+  "persons": {
+    "slug": "personen",
+    "block": "person-1"
+  },
+  "reviews": {}
+}

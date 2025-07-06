@@ -1,20 +1,19 @@
-import { slugs } from "@/data/config.json"
-import type { CollectionKey } from "astro:content"
+import type { CollectionEntry, CollectionKey } from "astro:content"
+import config from "fulldev.config.json"
 
 export function getHref({
   collection,
   id,
-}: {
-  collection: CollectionKey
-  id: string
-}) {
-  // Home page
-  if (collection === "pages" && id === "index") return "/"
-  // Other root level pages
-  else if (collection === "pages") return `/${id}/`
-  // Pages for which a  collection slug is defined
-  else if (collection in slugs)
-    return `/${slugs[collection as keyof typeof slugs]}/${id}/`
-  // Else return undefined, this is not a page
-  else return undefined
+  data,
+}: CollectionEntry<CollectionKey>) {
+  if ("draft" in data && data.draft) return undefined
+
+  const slug =
+    collection in config && config[collection as keyof typeof config].slug
+  if (slug === undefined) return undefined
+
+  const href = `/${slug}/${id}/`
+  const hrefWithoutIndex = href.replace("/index/", "/")
+  const hrefWithoutDoubleSlashes = hrefWithoutIndex.replace(/\/\//g, "/")
+  return hrefWithoutDoubleSlashes
 }

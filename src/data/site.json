@@ -1,0 +1,140 @@
+{
+  "lang": "nl",
+  "company": "Ank Schravendeel",
+  "banner": {
+    "block": "banner-1",
+    "children": "De gloednieuwe website staat online 🎉"
+  },
+
+  "header": {
+    "block": "header-1",
+    "logo": {
+      "title": "Ank Schravendeel"
+    },
+    "menus": [
+      {
+        "text": "Coaching",
+        "href": "/aanbod/coaching/"
+      },
+      {
+        "text": "Meditatie",
+        "links": [
+          {
+            "text": "Meditatie",
+            "href": "/aanbod/meditatie/"
+          },
+          {
+            "text": "Retraite",
+            "href": "/aanbod/retraite/"
+          },
+          {
+            "text": "Zingen en mediteren",
+            "href": "/aanbod/zingen-en-mediteren/"
+          }
+        ]
+      },
+      {
+        "text": "Agenda",
+        "href": "/agenda/"
+      },
+      {
+        "text": "Lezingen",
+        "href": "/lezingen/"
+      },
+      {
+        "text": "Blog",
+        "href": "/blog/"
+      },
+      {
+        "text": "Over mij",
+        "href": "/over-mij/"
+      }
+    ],
+    "links": [
+      {
+        "text": "Neem contact op",
+        "href": "/contact/"
+      }
+    ]
+  },
+  "footer": {
+    "block": "footer-1",
+    "logo": {
+      "title": "Ank Schravendeel"
+    },
+    "description": "Meditatie: zijn met wat er is en dat toelaten. Coaching: je ervaring geeft inzicht en je leert je er toe verhouden.\n",
+    "channels": [
+      {
+        "type": "phone",
+        "value": "316 52624506"
+      },
+      {
+        "type": "email",
+        "value": "welkom@ankschravendeel.nl"
+      },
+      {
+        "type": "address",
+        "value": "Star Numanstraat 65, Groningen"
+      }
+    ],
+    "menus": [
+      {
+        "text": "Aanbod",
+        "href": "/aanbod/",
+        "links": [
+          {
+            "text": "Coaching",
+            "href": "/aanbod/coaching/"
+          },
+          {
+            "text": "Meditatie",
+            "href": "/aanbod/meditatie/"
+          },
+          {
+            "text": "Retraite",
+            "href": "/aanbod/retraite/"
+          },
+          {
+            "text": "Zingen en mediteren",
+            "href": "/aanbod/zingen-en-mediteren/"
+          }
+        ]
+      },
+      {
+        "text": "Overig",
+        "links": [
+          {
+            "text": "Agenda",
+            "href": "/agenda/"
+          },
+          {
+            "text": "Lezingen",
+            "href": "/lezingen/"
+          },
+          {
+            "text": "Blog",
+            "href": "/blog/"
+          },
+          {
+            "text": "Over mij",
+            "href": "/over-mij/"
+          }
+        ]
+      }
+    ],
+    "copyright": "Ank Schravendeel",
+    "links": [
+      {
+        "text": "Website door Fulldev",
+        "href": "https://full.dev"
+      },
+      {
+        "text": "Fotografie door Nelleke Heinkens",
+        "href": "https://nellekeheinkens.com"
+      }
+    ]
+  },
+  "head": "",
+  "body": "",
+  "css": ""
+}

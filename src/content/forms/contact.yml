@@ -1,0 +1,14 @@
+inbox: ankschravendeel
+action: /bedankt/
+fields:
+  - type: text
+    label: Naam
+    required: true
+  - type: email
+    label: Email
+    required: true
+  - type: tel
+    label: Telefoon
+  - type: textarea
+    label: Bericht
+submit: Verstuur bericht

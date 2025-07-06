@@ -1,27 +1,24 @@
 import * as React from "react"
 
+import type { BlockProps } from "@/lib/types"
 import { Badge } from "@/components/ui/badge"
-import { Heading } from "@/components/ui/heading"
-import { Paragraph } from "@/components/ui/paragraph"
-import { Tagline } from "@/components/ui/tagline"
-import { Tile, TileContent, TileHeader } from "@/components/ui/tile"
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+} from "@/components/ui/section"
+import {
+  Tile,
+  TileContent,
+  TileDescription,
+  TileTagline,
+  TileTitle,
+} from "@/components/ui/tile"
 import { Toggle } from "@/components/ui/toggle"
-import { Writeup } from "@/components/ui/writeup"
 
-export interface Posts1Props {
-  children?: React.ReactNode
-  posts?: {
-    href?: string
-    title?: string
-    description?: string
-    published?: Date
-    tags?: string[]
-  }[]
-}
-
-export default function Posts1({ children, posts }: Posts1Props) {
-  // Collect all tags from posts, flatten, and deduplicate
-  const allTags = posts?.flatMap(({ tags }) => tags)
+export default function ({ children, items }: BlockProps) {
+  // Collect all tags from items, flatten, and deduplicate
+  const allTags = items?.flatMap(({ tags }) => tags)
   const uniqueTags = [...new Set(allTags)].filter((tag) => tag !== undefined)
 
   // State for the currently active tag filter (null = show all)
@@ -34,27 +31,25 @@ export default function Posts1({ children, posts }: Posts1Props) {
     )
   }
 
-  // Filter posts by active tag, or show all if none selected
+  // Filter items by active tag, or show all if none selected
   const filteredPosts = React.useMemo(() => {
-    if (activeTags.length === 0) return posts
-    return posts?.filter((post) =>
-      post.tags?.some((tag) => activeTags.includes(tag))
+    if (activeTags.length === 0) return items
+    return items?.filter((item) =>
+      item.tags?.some((tag) => activeTags.includes(tag))
     )
-  }, [posts, activeTags])
+  }, [items, activeTags])
 
   return (
-    <section className="relative w-full py-16">
-      <div className="mx-auto flex w-full flex-col items-center px-4 md:px-12">
+    <Section>
+      <SectionContainer className="max-w-screen-md lg:px-12">
         {children && (
-          <Writeup className="text-center" size="4xl">
-            {children}
-          </Writeup>
+          <SectionContent className="text-center">{children}</SectionContent>
         )}
         <div className="flex flex-col gap-4 not-first:mt-16">
           <div className="mb-8 flex flex-row flex-wrap justify-center gap-2">
-            {uniqueTags?.map((tag) => (
+            {uniqueTags?.map((tag: string, i: number) => (
               <Toggle
-                key={tag}
+                key={i}
                 size="sm"
                 variant="outline"
                 onPressedChange={handleTagToggle(tag)}
@@ -65,30 +60,26 @@ export default function Posts1({ children, posts }: Posts1Props) {
           </div>
           <div className="mx-auto flex max-w-screen-md flex-col gap-4">
             {filteredPosts?.map(
-              ({ href, title, description, published, tags }) => (
-                <Tile href={href} key={href}>
-                  {tags && (
-                    <TileHeader className="flex flex-row flex-wrap">
-                      {tags?.map((tag) => (
-                        <Badge variant="secondary" key={tag}>
-                          {tag}
-                        </Badge>
-                      ))}
-                    </TileHeader>
-                  )}
+              ({ href, title, description, published, tags }, i: number) => (
+                <Tile className="gap-2" key={i} href={href} panel={false}>
                   <TileContent>
-                    <Tagline size="xs">
+                    {tags?.map((tag: string, j: number) => (
+                      <Badge key={j} variant="secondary">
+                        {tag}
+                      </Badge>
+                    ))}
+                    <TileTagline>
                       {published?.toLocaleDateString("nl-NL")}
-                    </Tagline>
-                    <Heading as="h3">{title}</Heading>
-                    <Paragraph>{description}</Paragraph>
+                    </TileTagline>
+                    <TileTitle>{title}</TileTitle>
+                    <TileDescription>{description}</TileDescription>
                   </TileContent>
                 </Tile>
               )
             )}
           </div>
         </div>
-      </div>
-    </section>
+      </SectionContainer>
+    </Section>
   )
 }

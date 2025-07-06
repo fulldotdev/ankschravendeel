@@ -2,28 +2,17 @@
 title: Neem gerust contact met mij op
 blocks:
   - block: contact-1
-    content: |
+    children: |
       <h1>Neem gerust contact met mij op</h1>
       <p>Neem gerust contact met mij op, stel je vraag via onderstaand contactformulier, of geef me een seintje of telefoontje</p>
-    form:
-      inbox: ankschravendeel
-      action: /bedankt/
-      fields:
-        - type: text
-          label: Naam
-          required: true
-        - type: email
-          label: Email
-          required: true
-        - type: tel
-          label: Telefoon
-        - type: textarea
-          label: Bericht
-      submit: Verstuur bericht
+    form: /src/content/forms/contact.yml
     channels:
-      address: "Star Numanstraat 65, Groningen"
-      phone: 06 52624506
-      email: welkom@ankschravendeel.nl
+      - type: phone
+        value: 06 52624506
+      - type: email
+        value: welkom@ankschravendeel.nl
+      - type: address
+        value: "Star Numanstraat 65, Groningen"
 
 seo:
   title: Contact | Ank Schravendeel - Meditatie & Coaching

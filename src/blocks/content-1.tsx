@@ -1,44 +1,38 @@
-import { Heading } from "@/components/ui/heading"
-import { Paragraph } from "@/components/ui/paragraph"
-import { Prose } from "@/components/ui/prose"
+import type { BlockProps } from "@/lib/types"
+import { Link } from "@/components/ui/link"
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionFooter,
+  SectionSplit,
+} from "@/components/ui/section"
 
-export interface Content1Props {
-  title?: string
-  description?: string
-  image?: {
-    src?: string
-    alt?: string
-  }
-  children?: React.ReactNode
-}
-
-export default function ({
-  title,
-  description,
-  image,
-  children,
-}: Content1Props) {
+export default function ({ children, links, image, reverse }: BlockProps) {
   return (
-    <section className="relative w-full py-16">
-      <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 lg:px-8">
-        {title && (
-          <Heading className="mb-4" as="h1" size="5xl">
-            {title}
-          </Heading>
-        )}
-        {description && (
-          <Paragraph
-            className="text-muted-foreground mt-4 font-medium"
-            size="lg"
-          >
-            {description}
-          </Paragraph>
-        )}
-        {image && (
-          <img className="mt-8 rounded-md" src={image.src} alt={image.alt} />
-        )}
-        <Prose className="not-first:mt-8">{children}</Prose>
-      </div>
-    </section>
+    <Section>
+      <SectionContainer>
+        <SectionSplit className="items-center" reverse={reverse}>
+          <div className="flex flex-col items-start">
+            {children && <SectionContent>{children}</SectionContent>}
+            {links && links.length > 0 && (
+              <SectionFooter className="not-first:mt-6">
+                {links?.map(({ text, href, ...link }, i) => (
+                  <Link
+                    key={i}
+                    href={href}
+                    variant={i === 0 ? "default" : "ghost"}
+                    {...link}
+                  >
+                    {text}
+                  </Link>
+                ))}
+              </SectionFooter>
+            )}
+          </div>
+          {image && <img className="rounded-lg" {...image} />}
+        </SectionSplit>
+      </SectionContainer>
+    </Section>
   )
 }

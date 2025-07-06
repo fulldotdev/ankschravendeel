@@ -1,34 +1,21 @@
 ---
 title: Ank Schravendeel
 tagline: MBVO trainer & InBalans Docent
-avatar: /images/over-mij.jpeg
+avatar:
+  src: /images/over-mij.jpeg
+  alt: Ank Schravendeel
 socials:
   - https://www.facebook.com/nieksnippe
   - https://www.instagram.com/nieksnippe
   - https://www.x.com/nieksnippe
-buttons:
+links:
   - text: niek@eldersfit.nl
     href: mailto:niek@eldersfit.nl
   - text: +316 55975066
     href: tel:+31655975066
   - text: Stuur een bericht
     href: "#form"
-form:
-  inbox: ankschravendeel
-  action: /bedankt/
-  fields:
-    - type: text
-      label: Naam
-      required: true
-    - type: email
-      label: Email
-      required: true
-    - type: text
-      label: Telefoon
-      required: true
-    - type: textarea
-      label: Bericht
-  submit: Bericht versturen
+form: /src/content/forms/contact.yml
 ---
 
 # Over mij

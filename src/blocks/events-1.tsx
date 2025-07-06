@@ -1,36 +1,52 @@
-import type { BlockProps } from "@/schemas/block"
+import type { BlockProps } from "@/lib/types"
+import { Link } from "@/components/ui/link"
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+} from "@/components/ui/section"
+import {
+  Tile,
+  TileContent,
+  TileDescription,
+  TileFooter,
+  TileTagline,
+  TileTitle,
+} from "@/components/ui/tile"
 
-import { Heading } from "@/components/ui/heading"
-import { Paragraph } from "@/components/ui/paragraph"
-import { Writeup } from "@/components/ui/writeup"
-
-export interface Events1Props {
-  children?: React.ReactNode
-  events?: {
-    href?: string
-    title?: string
-    description?: string
-  }[]
-}
-
-export default function ({ children, events }: Events1Props) {
+export default function ({ children, items }: BlockProps) {
   return (
-    <section className="relative w-full py-16">
-      <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 md:px-12">
-        {children && <Writeup size="4xl">{children}</Writeup>}
-        <div className="flex flex-col gap-4 not-first:mt-16">
-          {events?.map(({ href, title, description }) => (
-            <a
-              href={href}
-              className="flex flex-col items-start gap-4 rounded-lg border p-6"
-              key={href}
-            >
-              <Heading as="h3">{title}</Heading>
-              <Paragraph>{description}</Paragraph>
-            </a>
+    <Section>
+      <SectionContainer className="max-w-screen-md lg:px-12">
+        {children && <SectionContent>{children}</SectionContent>}
+        <div className="flex flex-col gap-4 not-first:mt-12">
+          {items?.map(({ href, title, description, tagline, links }, i) => (
+            <Tile className="gap-2" key={i} href={href}>
+              <TileContent>
+                {tagline && <TileTagline>{tagline}</TileTagline>}
+                <TileTitle>{title}</TileTitle>
+                {description && (
+                  <TileDescription>{description}</TileDescription>
+                )}
+              </TileContent>
+              {links && links.length > 0 && (
+                <TileFooter>
+                  {links.map(({ href, text }, i: number) => (
+                    <Link
+                      key={i}
+                      href={href}
+                      variant={i === 0 ? "outline" : "ghost"}
+                      size="sm"
+                    >
+                      {text}
+                    </Link>
+                  ))}
+                </TileFooter>
+              )}
+            </Tile>
           ))}
         </div>
-      </div>
-    </section>
+      </SectionContainer>
+    </Section>
   )
 }

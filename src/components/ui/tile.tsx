@@ -2,8 +2,6 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-// [&_*[data-slot=tile-image]]:rounded-lg
-
 function Tile({
   className,
   panel = true,
@@ -17,9 +15,9 @@ function Tile({
     <Comp
       data-slot="tile"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-4",
+        "text-card-foreground flex flex-col gap-6",
         panel &&
-          "overflow-hidden rounded-lg border pb-6 **:data-[slot=tile-content]:px-6 **:data-[slot=tile-footer]:px-6 **:data-[slot=tile-header]:px-6",
+          "bg-card gap-0 overflow-hidden rounded-lg border **:data-[slot=tile-content]:p-6 **:data-[slot=tile-footer]:p-6",
         !panel && "**:data-[slot=tile-image]:rounded-lg",
         Comp === "a" && "group",
         panel && Comp === "a" && "shadow-xs transition-shadow hover:shadow-sm",
@@ -43,21 +41,11 @@ function TileImage({ className, ...props }: React.ComponentProps<"img">) {
   )
 }
 
-function TileHeader({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="tile-header"
-      className={cn("flex flex-col gap-2 first:mt-6", className)}
-      {...props}
-    />
-  )
-}
-
 function TileContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="tile-content"
-      className={cn("flex flex-col gap-2 first:mt-6", className)}
+      className={cn("flex flex-col gap-2", className)}
       {...props}
     />
   )
@@ -67,65 +55,48 @@ function TileFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="tile-footer"
-      className={cn("first:mt-6", className)}
+      className={cn("!pt-0", className)}
       {...props}
     />
   )
 }
 
-// function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
-//   return (
-//     <div
-//       data-slot="card-title"
-//       className={cn("leading-none font-semibold", className)}
-//       {...props}
-//     />
-//   )
-// }
+function TileTitle({ className, ...props }: React.ComponentProps<"h3">) {
+  return (
+    <h3
+      className={cn("text-foreground font-semibold text-pretty", className)}
+      {...props}
+    />
+  )
+}
 
-// function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
-//   return (
-//     <div
-//       data-slot="card-description"
-//       className={cn("text-muted-foreground text-sm", className)}
-//       {...props}
-//     />
-//   )
-// }
+function TileDescription({ className, ...props }: React.ComponentProps<"p">) {
+  return (
+    <div
+      className={cn(
+        "text-muted-foreground text-sm leading-[1.75] text-pretty",
+        className
+      )}
+      {...props}
+    />
+  )
+}
 
-// function CardAction({ className, ...props }: React.ComponentProps<"div">) {
-//   return (
-//     <div
-//       data-slot="card-action"
-//       className={cn(
-//         "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
-//         className
-//       )}
-//       {...props}
-//     />
-//   )
-// }
-
-// function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
-//   return (
-//     <div
-//       data-slot="card-footer"
-//       className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
-//       {...props}
-//     />
-//   )
-// }
+function TileTagline({ className, ...props }: React.ComponentProps<"p">) {
+  return (
+    <div
+      className={cn("text-primary text-xs font-medium text-pretty", className)}
+      {...props}
+    />
+  )
+}
 
 export {
   Tile,
   TileImage,
   TileContent,
-  TileHeader,
   TileFooter,
-  // CardHeader,
-  // CardFooter,
-  // CardTitle,
-  // CardAction,
-  // CardDescription,
-  // CardContent,
+  TileTitle,
+  TileDescription,
+  TileTagline,
 }

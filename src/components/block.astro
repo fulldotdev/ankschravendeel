@@ -1,53 +1,47 @@
 ---
-import { type BlockSchema } from "@/schemas/block"
-import { getCollection, getEntries, getEntry } from "astro:content"
+import { getCollection } from "astro:content"
+import type { CollectionKey } from "astro:content"
+import config from "fulldev.config.json"
+import { keys, omit } from "remeda"
 
-import { transformEntries, transformEntry } from "@/lib/transform"
+import { getHref } from "@/lib/get-href"
+import { getItem } from "@/lib/get-item"
+import type { BlockSchema } from "@/lib/types"
 import { Block as ReactBlock } from "@/components/block"
 
 type Props = BlockSchema
 
-const { posts, articles, services, events, reviews, person, ...props } =
-  Astro.props
+const { form, collection, ...props } = Astro.props
+const collectionKeys = keys(config)
 
-const postsEntries = posts
-  ? await getEntries(posts)
-  : await getCollection("posts")
-const postsTransformed = postsEntries && transformEntries(postsEntries)
+// fetch all paths and put into the items array
+const items = (
+  await Promise.all(
+    collectionKeys.map(async (collectionKey) => {
+      const paths = props[collectionKey]
+      if (!paths) return undefined
+      return Promise.all(paths.map(getItem))
+    })
+  )
+)
+  .flat()
+  .filter((item) => item !== undefined)
 
-const articlesEntries = articles
-  ? await getEntries(articles)
-  : await getCollection("articles")
-const articlesTransformed = articlesEntries && transformEntries(articlesEntries)
+// get all items in a collection
+const collectionItems =
+  collection &&
+  (await getCollection(collection as CollectionKey)).map((entry) => ({
+    href: getHref(entry),
+    ...entry.data,
+  }))
 
-const servicesEntries = services
-  ? await getEntries(services)
-  : await getCollection("services")
-const servicesTransformed = servicesEntries && transformEntries(servicesEntries)
-
-const eventsEntries = events
-  ? await getEntries(events)
-  : await getCollection("events")
-const eventsTransformed = eventsEntries && transformEntries(eventsEntries)
-
-const reviewsEntries = reviews
-  ? await getEntries(reviews)
-  : await getCollection("reviews")
-const reviewsTransformed = reviewsEntries && transformEntries(reviewsEntries)
-
-const personEntry = person && (await getEntry(person))
-const personTransformed = personEntry && transformEntry(personEntry)
+// get form by path
+const formItem = form && getItem(form)
 ---
 
 <ReactBlock
   client:load
-  posts={postsTransformed}
-  articles={articlesTransformed}
-  services={servicesTransformed}
-  events={eventsTransformed}
-  reviews={reviewsTransformed}
-  person={personTransformed}
-  {...props}
->
-  <Fragment set:html={Astro.props.content} />
-</ReactBlock>
+  items={[...items, ...(collectionItems ?? [])]}
+  form={formItem}
+  {...omit(props, collectionKeys)}
+/>

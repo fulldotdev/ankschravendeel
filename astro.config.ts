@@ -5,16 +5,31 @@ import favicons from "astro-favicons"
 import robotsTxt from "astro-robots-txt"
 import { defineConfig, fontProviders } from "astro/config"
 
-import integration from "./src/lib/integration"
-
+// https://astro.build/config
 export default defineConfig({
-  site: "https://ui.full.dev",
+  site: "https://ankschravendel.nl",
   experimental: {
     fonts: [
       {
         provider: fontProviders.google(),
         name: "Geist",
         cssVariable: "--font-sans",
+        weights: [
+          "100",
+          "200",
+          "300",
+          "400",
+          "500",
+          "600",
+          "700",
+          "800",
+          "900",
+        ],
+      },
+      {
+        provider: fontProviders.google(),
+        name: "Geist",
+        cssVariable: "--font-serif",
         weights: [
           "100",
           "200",
@@ -35,8 +50,9 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  integrations: [robotsTxt(), sitemap(), react(), integration(), favicons()],
+  integrations: [robotsTxt(), sitemap(), react(), favicons()],
   vite: {
     plugins: [tailwindcss()],
   },
+  redirects: {},
 })

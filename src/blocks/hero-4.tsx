@@ -1,41 +1,37 @@
-import type { BlockProps } from "@/schemas/block"
+import type { BlockProps } from "@/lib/types"
+import { Link } from "@/components/ui/link"
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionFooter,
+} from "@/components/ui/section"
 
-import { Button } from "@/components/ui/button"
-import { Writeup } from "@/components/ui/writeup"
-
-export interface Hero4Props {
-  children?: React.ReactNode
-  image?: {
-    src?: string
-    alt?: string
-  }
-  buttons?: {
-    href?: string
-    text?: string
-  }[]
-}
-
-export default async function ({ children, image, buttons }: Hero4Props) {
+export default function ({ children, links, image }: BlockProps) {
   return (
-    <section className="bg-background relative min-h-screen w-full py-16">
-      <img className="absolute inset-0 size-full object-cover" {...image} />
-      <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center px-4 lg:px-8">
-        <Writeup className="mb-8 text-center" size="6xl">
+    <Section className="flex min-h-screen">
+      {image && (
+        <img className="absolute inset-0 size-full object-cover" {...image} />
+      )}
+      <SectionContainer className="relative flex flex-col items-center">
+        <SectionContent size="xl" className="text-center">
           {children}
-        </Writeup>
-        <div className="flex gap-4">
-          {buttons?.map(({ href, text }, i) => (
-            <Button
-              asChild
-              size="lg"
-              key={href}
-              variant={i === 0 ? "default" : "ghost"}
-            >
-              <a href={href}>{text}</a>
-            </Button>
-          ))}
-        </div>
-      </div>
-    </section>
+        </SectionContent>
+        {links && links.length > 0 && (
+          <SectionFooter className="mt-8">
+            {links.map(({ href, text }, i) => (
+              <Link
+                key={href}
+                href={href}
+                variant={i === 0 ? "default" : "outline"}
+                size="lg"
+              >
+                {text}
+              </Link>
+            ))}
+          </SectionFooter>
+        )}
+      </SectionContainer>
+    </Section>
   )
 }

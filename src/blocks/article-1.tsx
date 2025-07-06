@@ -1,55 +1,35 @@
-import * as React from "react"
-import type { BlockProps } from "@/schemas/block"
+import { CalendarIcon } from "lucide-react"
 
-import { Heading } from "@/components/ui/heading"
-import { Paragraph } from "@/components/ui/paragraph"
-import { Prose } from "@/components/ui/prose"
-import { Tagline } from "@/components/ui/tagline"
-
-interface Post1Props extends BlockProps {
-  title?: string
-  published?: Date
-  description?: string
-  image?: {
-    src?: string
-    alt?: string
-  }
-  children?: React.ReactNode
-}
+import type { BlockProps } from "@/lib/types"
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+} from "@/components/ui/section"
 
 export default function ({
+  children,
   title,
   published,
   description,
   image,
-  children,
-}: Post1Props) {
+}: BlockProps) {
   return (
-    <section className="relative w-full py-16">
-      <div className="mx-auto flex w-full max-w-screen-md flex-col px-4 lg:px-8">
-        {published && (
-          <Tagline className="mb-4">
-            {new Date(published).toLocaleDateString("nl-NL")}
-          </Tagline>
-        )}
-        {title && (
-          <Heading className="mb-4" as="h1" size="5xl">
-            {title}
-          </Heading>
-        )}
-        {description && (
-          <Paragraph
-            className="text-muted-foreground mt-4 font-medium"
-            size="lg"
-          >
-            {description}
-          </Paragraph>
-        )}
-        {image && (
-          <img className="mt-8 rounded-md" src={image.src} alt={image.alt} />
-        )}
-        <Prose className="not-first:mt-8">{children}</Prose>
-      </div>
-    </section>
+    <Section>
+      <SectionContainer className="flex flex-col items-center gap-16">
+        <SectionContent className="text-center" size="xl">
+          {published && (
+            <p className="inline-flex items-center gap-2 text-sm font-medium">
+              <CalendarIcon className="size-4" />
+              {new Date(published).toLocaleDateString("nl-NL")}
+            </p>
+          )}
+          {title && <h1 className="!mt-4">{title}</h1>}
+          {description && <p>{description}</p>}
+        </SectionContent>
+        {image && <img className="max-w-5xl rounded-md" {...image} />}
+        <SectionContent>{children}</SectionContent>
+      </SectionContainer>
+    </Section>
   )
 }
