@@ -81,7 +81,10 @@ export default function Posts1({ children, posts }: Posts1Props) {
                       {published?.toLocaleDateString("nl-NL")}
                     </Tagline>
                     <Heading as="h3">{title}</Heading>
-                    <Paragraph>{description}</Paragraph>
+                    <Paragraph
+                      className="[&_a]:text-primary [&_a]:underline"
+                      dangerouslySetInnerHTML={{ __html: description ?? "" }}
+                    />
                   </TileContent>
                 </Tile>
               )
