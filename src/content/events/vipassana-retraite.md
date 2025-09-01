@@ -1,4 +1,5 @@
 ---
+published: 2026-02-14
 title: Vipassana retraite "vol vreugde"
 when: 14 februari - 19 februari 2026
 where: Abdijhoeve Bethlehem, Doetinchem
