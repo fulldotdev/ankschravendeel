@@ -1,0 +1,9 @@
+---
+tags:
+  - Ank & Katleen op vipassana retraite
+title: Ank ritme (energie en concentratie)
+description: >
+  Opmerkzaamheid heeft twee compagnons: energie en concentratie, die elkaar in balans houden
+published: 2025-09-12T12:00:00Z
+href: /lezingen/Lezing Ank ritme Maanhoeve aug 25.m4a
+---
