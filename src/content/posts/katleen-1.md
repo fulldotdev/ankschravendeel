@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Katleen 1
 description: >
   De overgang maken van het dagdagelijkse leven naar een retraite brengt in contact met onrust en slaperigheid. Wat hindert, helpt je om er opmerkzaam van te worden.

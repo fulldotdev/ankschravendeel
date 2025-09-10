@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Katleen veranderlijkheid
 description: >
   Onze persoonlijke ervaringen brengen ons in contact met een breder perspectief: wat eigen is aan levensprocessen, zoals veranderlijkheid

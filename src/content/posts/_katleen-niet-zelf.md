@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Katleen niet zelf
 description: >
   Je ervaringen kunnen zien in het perspectief van levensprocessen brengt ons in contact met oncontroleerbaarheid, er is geen onafhankelijk zelf dat de ervaringen in de hand heeft

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Ank ritme (energie en concentratie)
 description: >
   Opmerkzaamheid heeft twee compagnons: energie en concentratie, die elkaar in balans houden

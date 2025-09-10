@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Katleen Metta / vier Brhama Vihara
 description: >
   Opmerkzaamheid wordt gevoed met vriendelijkheid en welwillendheid, met compassie en vreugde om andermans voorspoed en gelijkmoedigheid

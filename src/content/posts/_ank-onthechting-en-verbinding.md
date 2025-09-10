@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Ank Onthechting en verbinding
 description: >
   We hebben geen controle over wat we ervaren en dat gegeven brengt ons in contact met gedeelde menselijkheid

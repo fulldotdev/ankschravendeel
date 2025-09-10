@@ -1,6 +1,6 @@
 ---
 tags:
-  - Ank & Katleen op vipassana retraite
+  - 10 daagse retraite door Ank & Katleen
 title: Ank wijsheid en compassie
 description: >
   Meditatie ontwikkelt inzicht in de realiteit en compassie

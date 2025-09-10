@@ -1,6 +1,6 @@
 ---
 tags:
-  - Lezingen
+  - Lezingen met video
   - Meditatie in turbulente tijden
 title: Spreken en zwijgen
 description: >
