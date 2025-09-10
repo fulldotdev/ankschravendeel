@@ -1,6 +1,6 @@
 ---
 tags:
-  - Lezingen
+  - Lezingen met video
 title: Geestkracht opbouwen
 description: >
   Door te mediteren wordt je geest krachtig en stabiel. De lezing maakt deel uit

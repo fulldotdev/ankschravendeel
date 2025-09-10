@@ -20,8 +20,7 @@ seo:
     een unieke spirituele ervaring onder begeleiding van Ank Schravendeel en
     Arman Ameri.
 ---
-
-Ik werk samen met Arman Ameri Mahani, een Iraans musicus die zich heeft gewijd aan het leren van Dhrupad (Indiase klassieke muziek). Hij zingt raga’s en mantra’s en speelt op authentieke snaarinstrumenten.
+Ik werk samen met Arman Amiri Mahani, een Iraans musicus die zich heeft gewijd aan het leren van Dhrupad (Indiase klassieke muziek). Hij zingt raga’s en mantra’s en speelt op authentieke snaarinstrumenten.
 
 Mediteren maakt open naar binnen: dat maakt ingetogen. Door meditatie komen we in verbinding met ons lichaam, het hart opent voor wat we ervaren, we worden bewust van de ervaring. Ontvankelijk zijn, verstillen.
 
@@ -29,10 +28,10 @@ Zingen brengt klank naar buiten, resoneert: dat maakt opgetogen.
 
 ### Wat voor ons belangrijk is in zingen en mediteren:
 
-- Klank gaat voorbij woorden en concepten, net als het ervaren van wat je beleeft in de meditatie.
-- Je gebruikt je vaardigheid om te zingen en het overkomt je, ratio en intuïtie komen bij elkaar.
-- Mediteren maakt ingetogen, zingen maakt opgetogen: vreugde geeft concentratie.
-- Expressie geven, je laten horen, geeft verbondenheid.
+* Klank gaat voorbij woorden en concepten, net als het ervaren van wat je beleeft in de meditatie.
+* Je gebruikt je vaardigheid om te zingen en het overkomt je, ratio en intuïtie komen bij elkaar.
+* Mediteren maakt ingetogen, zingen maakt opgetogen: vreugde geeft concentratie.
+* Expressie geven, je laten horen, geeft verbondenheid.
 
 > “a spiritual friend hears the song of your heart
 >
@@ -56,7 +55,7 @@ Arman improviseert verder op het klankbeeld van de raga. Dat kan op verschillend
 
 ### Begeleiding
 
-#### Arman Ameri Mahani
+#### Arman Amiri Mahani
 
 Arman is van oorsprong een Iraanse musicus. Hij heeft zich een aantal jaren gewijd aan het beoefenen van Dhrupad (een Indiase Klassieke muziekvorm) waar het meditatieve zingen zijn oorsprong in vindt. Hij beoefent het meditatief zingen van raga’s en het bespelen van verschillende snaarinstrumenten. In de afgelopen twee jaar volgde hij een master opleiding aan het conservatorium in Groningen. Hij werkt als zorg muzikant met mensen met een ernstige mentale beperking.
 

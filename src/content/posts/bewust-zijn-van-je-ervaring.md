@@ -1,6 +1,6 @@
 ---
 tags:
-  - Lezingen
+  - Lezingen met video
   - Meditatie in turbulente tijden
 title: Bewust zijn van je ervaring
 description: >

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Lezingen
+  - Lezingen met video
   - Meditatie in turbulente tijden
 title: Grond onder je voeten, grond onder je geest
 description: >-
