@@ -1,0 +1,28 @@
+---
+import Content1 from "@/blocks/content-1"
+import { getCollection, render } from "astro:content"
+
+import Layout from "@/components/layout.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts")
+  return posts.map((post) => {
+    return {
+      params: {
+        posts: "lezingen",
+        post: post.id,
+      },
+      props: post,
+    }
+  })
+}
+
+const { blocks, ...data } = Astro.props.data
+const { Content } = await render(Astro.props)
+---
+
+<Layout {...data}>
+  <Content1 {...data}>
+    <Content />
+  </Content1>
+</Layout>
