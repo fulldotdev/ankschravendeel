@@ -27,7 +27,7 @@ Coaching is gericht op verhelderen, verdiepen en versterken. Een probleem in wer
 * Ik weet niet beter wat goed is voor jou. Ik geef je de ruimte om te vertellen, zodat je dat zelf kunt ontdekken
 * Wat resoneert er, wat wordt aangeraakt? Wat krijgt bestaansrecht, wat niet?
 
-### Werkervaring!
+### Werkervaring
 
 Ik werkte als manager in een verpleeghuis en werd ziek. Een wisseling van perspectief, van leidinggevende naar patiënt. Ik moest leren omgaan met verlies en rouw en een andere werkinvulling vinden. Dat was de aanleiding om een coaching opleiding te volgen. Daarvoor werkte ik als trainer, project coördinator en manager in een verpleeghuis.
 
