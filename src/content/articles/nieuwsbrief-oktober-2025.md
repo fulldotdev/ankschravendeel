@@ -8,10 +8,6 @@ image:
   alt: Nieuwsbrief oktober 2025
 ---
 
-# Nieuwsbrief oktober 2025
-
-**Van Ank Schravendeel**
-
 Hallo!
 
 Ik wil mijn vernieuwde website onder je aandacht brengen. https://ankschravendeel.nl/
