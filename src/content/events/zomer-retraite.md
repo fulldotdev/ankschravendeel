@@ -69,7 +69,7 @@ De begeleiding vindt plaats op basis van dana\*.
 
 Mochten de kosten een grote belemmering vormen om deel te nemen, dan kan je contact opnemen met de penningmeester van de SIM: Nelleke Heinkens, penningmeester@simsara.nl. Met haar kan je kijken of er een regeling mogelijk is.
 
-Na aanmelding via https://simsara.nl/sim-retraite/sim-vipassana-tiendaagse/ hoor je zo spoedig mogelijk van ons.
+<!-- Na aanmelding via https://simsara.nl/sim-retraite/sim-vipassana-tiendaagse/ hoor je zo spoedig mogelijk van ons. -->
 
 Als je praktische vragen hebt kan je mailen met: Katleen Janssens (katleen@aora.be). Voor inhoudelijke vragen kun je contact opnemen met Ank Schravendeel of 06-13654059.
 
