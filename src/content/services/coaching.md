@@ -19,14 +19,13 @@ seo:
     coaching je kan helpen bij het verhelderen van je doelen en het maken van
     bewuste keuzes.
 ---
-
 Coaching is gericht op verhelderen, verdiepen en versterken. Een probleem in werk of in levensloop geeft de noodzaak – en kans – om te onderzoeken wat je drijft en wat je hindert. een boeddhistische manier van kijken naar een probleem geeft ruimte en openheid: "Wat hindert, helpt"
 
 ## Wat ik belangrijk vind in mijn werk als coach:
 
-- Openhartigheid, in contact zijn
-- Ik weet niet beter wat goed is voor jou. Ik geef je de ruimte om te vertellen, zodat je dat zelf kunt ontdekken
-- Wat resoneert er, wat wordt aangeraakt? Wat krijgt bestaansrecht, wat niet?
+* Openhartigheid, in contact zijn
+* Ik weet niet beter wat goed is voor jou. Ik geef je de ruimte om te vertellen, zodat je dat zelf kunt ontdekken
+* Wat resoneert er, wat wordt aangeraakt? Wat krijgt bestaansrecht, wat niet?
 
 ### Werkervaring
 

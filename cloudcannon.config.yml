@@ -76,9 +76,7 @@ collection_groups:
       - services
       - events
       - posts
-      - persons
-      - policies
-      - reviews
+      - articles
   - heading: Settings
     collections:
       - data
