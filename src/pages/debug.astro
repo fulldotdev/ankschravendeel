@@ -1,7 +1,17 @@
 ---
 import { getEntry } from "astro:content"
 
+import Layout from "@/components/layout.astro"
+
 const post = await getEntry("posts", "de-geest-laten-opbloeien")
 ---
 
-<pre>{JSON.stringify(post, null, 2)}</pre>
+<Layout>
+  <h1>Debug</h1>
+  <div class="flex gap-16 p-16">
+    <div class="bg-muted h-[300px] w-[200px] rounded-[8%] border"></div>
+    <div class="bg-muted h-[300px] w-[200px] rounded-[20px] border"></div>
+  </div>
+
+  <pre>{JSON.stringify(post, null, 2)}</pre>
+</Layout>
