@@ -4,6 +4,7 @@ import { Heading } from "@/components/ui/heading"
 import { Logo } from "@/components/ui/logo"
 import { Paragraph } from "@/components/ui/paragraph"
 import { Social } from "@/components/ui/social"
+import { AutoForm } from "@/components/auto-form"
 import { Channels } from "@/components/channels"
 import { Menu } from "@/components/menu"
 
@@ -63,6 +64,24 @@ export default function ({
               {channels && (
                 <Channels className="not-first:mt-6" {...channels} />
               )}
+              <div className="flex flex-col -space-y-6 not-first:mt-8">
+                <h3 className="text-sm font-medium">
+                  Meld je aan voor de nieuwsbrief
+                </h3>
+                <AutoForm
+                  className="not-first:mt-6 [&_button]:-mt-6"
+                  inbox="ankschravendeel"
+                  fields={[
+                    {
+                      name: "email",
+                      placeholder: "Jouw email adres",
+                      name: "nieuwsbrief email",
+                      type: "email",
+                    },
+                  ]}
+                  submit="Aanmelden voor nieuwsbrief"
+                />
+              </div>
             </div>
             {menus?.map((menu) => (
               <Menu
