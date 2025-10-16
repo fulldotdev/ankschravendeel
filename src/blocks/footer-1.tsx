@@ -71,6 +71,7 @@ export default function ({
                 <AutoForm
                   className="not-first:mt-6 [&_button]:-mt-6"
                   inbox="ankschravendeel"
+                  action="/bedankt-voor-je-aanmelding/"
                   fields={[
                     {
                       name: "email",
