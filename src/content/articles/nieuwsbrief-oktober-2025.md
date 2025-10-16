@@ -1,6 +1,11 @@
 ---
 title: Nieuwsbrief oktober 2025
+description: >-
+  Ik wil mijn vernieuwde website onder je aandacht brengen.
 published: 2025-10-16T12:00:00Z
+image:
+  src: /images/nieuwsbrief-oktober-1.jpeg
+  alt: Nieuwsbrief oktober 2025
 ---
 
 # Nieuwsbrief oktober 2025
