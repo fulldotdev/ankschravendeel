@@ -8,7 +8,7 @@ blocks:
       <p>Ontvang een nieuwsbrief met de laatste ontwikkelingen op het gebied van meditatie en coaching.</p>
     form:
       inbox: ankschravendeel
-      action: /bedankt/
+      action: /bedankt-voor-je-aanmelding/
       fields:
         - type: email
           label: Email
