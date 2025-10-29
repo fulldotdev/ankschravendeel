@@ -1,21 +1,22 @@
 ---
-published: 2026-02-14
+published: 2026-02-14T00:00:00Z
 title: Vipassana retraite "vol vreugde"
 when: 14 februari - 19 februari 2026
 where: Abdijhoeve Bethlehem, Doetinchem
-description: Begeleiding door Chris Grijns & Ank Schravendeel | €639,- 1 persoons kamer met eigen sanitair | Met online ontmoetingen vooraf
+description: >-
+  Begeleiding door Chris Grijns & Ank Schravendeel | €712,- 1 persoons kamer met
+  eigen sanitair | Met online ontmoetingen vooraf
 ---
-
 ## Informatie
 
 Stichting Inzichtmeditatie organiseert een vipassana stilte retraite:
 
 ### Vol Vreugde
 
-- **Datum:** 14 februari tot en met 19 februari 2026
-- **Locatie:** Abdijhoeve Bethlehem (Slangenburg klooster), Doetinchem
-- **Begeleiding:** Ank Schravendeel & Chris Grijns
-- **Online ontmoetingen vooraf:** 3 dinsdagavonden (13, 27 januari en 10 februari 2026) van 19:30 - 21:00 uur
+* **Datum:** 14 februari tot en met 19 februari 2026
+* **Locatie:** Abdijhoeve Bethlehem (Slangenburg klooster), Doetinchem
+* **Begeleiding:** Ank Schravendeel & Chris Grijns
+* **Online ontmoetingen vooraf:** 3 dinsdagavonden (13, 27 januari en 10 februari 2026) van 19:30 - 21:00 uur
 
 Het thema van de retraite is vreugde, je afstemmen op de natuurlijke levendigheid in jezelf. Voorafgaand aan de retraite verkennen we via online ontmoetingen vreugde in het dagelijks leven. Het idee van deze opzet is dat we elkaar en het thema al hebben leren kennen. De retraite biedt daarna verdieping door het intensieve mediteren.
 
@@ -26,9 +27,7 @@ Als je het woord 'vreugde' overdreven vindt op dit moment, hoef je je geen zorge
 In de online ontmoetingen verkennen we alvast drie aspecten van vreugde:
 
 1. **13 januari 2026:** Welke vormen van vreugde ken je uit eigen ervaring? Is het een rustig gevoel van tevredenheid, of juist bruisend enthousiasme? We wisselen uit over de documentaire waarin De Dalai Lama en Desmond Tutu in gesprek zijn over vreugde.
-
 2. **27 januari 2026:** De vreugde van de motivatie van waaruit we iets zeggen of doen. En hoe we hiermee een heilzame staat van bewustzijn kunnen cultiveren. We bespreken de waarde van het formuleren van een intentie en oefenen daarmee.
-
 3. **10 februari 2026:** Het hart openen: hoe kunnen we onszelf en de ander het goede toewensen (metta).
 
 ## Programma
@@ -65,13 +64,13 @@ Matten, meditatiekussens, en stoelen zijn aanwezig. Als je liever een meditatieb
 
 ## Kosten en dana
 
-De kosten voor een éénpersoonskamer bedragen €639,-.
+De kosten voor een éénpersoonskamer bedragen €712,-.
 
 Je kunt de betaling overmaken op:
 
-- IBAN: NL72 TRIO 0338 4690 87
-- T.n.v.: Stichting Inzichts Meditatie Halsteren
-- Onder vermelding van: 'retraite Doetinchem februari 2026' + je postcode en huisnummer
+* IBAN: NL72 TRIO 0338 4690 87
+* T.n.v.: Stichting Inzichts Meditatie Halsteren
+* Onder vermelding van: 'retraite Doetinchem februari 2026' + je postcode en huisnummer
 
 De begeleiding vindt plaats op basis van dana (vrijgevigheid). De prijs dekt alleen kost en inwoning. Aan het einde van de retraite is er gelegenheid om een vrijwillige bijdrage te doneren aan de leraren.
 
@@ -79,8 +78,8 @@ De begeleiding vindt plaats op basis van dana (vrijgevigheid). De prijs dekt all
 
 Voor vragen kun je contact opnemen met:
 
-- Chris Grijns: chris.grijns@gmail.com | 06-23242364
-- Ank Schravendeel: welkom@ankschravendeel.nl | 06-52624506
+* Chris Grijns: chris.grijns@gmail.com \| 06-23242364
+* Ank Schravendeel: welkom@ankschravendeel.nl \| 06-52624506
 
 ## Begeleiding
 
