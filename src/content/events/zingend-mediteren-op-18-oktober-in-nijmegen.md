@@ -7,7 +7,7 @@ where: >-
   Begeleiding: Ank Schravendeel en Arman Ameri Mahani
 description: >-
   Zingen en mediteren | Thema "Resonantie en stilte" | Begeleiding door Ank
-  Schravendeel & Arman Maheri Mahani | €20,-
+  Schravendeel & Arman  Ameri Mahani | €20,-
 ---
 # Zingen en mediteren
 
