@@ -3,11 +3,11 @@ published: 2025-10-18T00:00:00Z
 title: Zingend mediteren
 when: 1 maart 2026
 where: >-
-  Stal de Marshoek, marshoekersteeg 17a, Dalfsen (aan de rand van Zwolle) 
+  Stal de Marshoek, Marshoekersteeg 17a, Dalfsen (aan de rand van Zwolle) 
   Begeleiding: Ank Schravendeel en Arman Ameri Mahani
 description: >-
   Zingen en mediteren | Thema "Resonantie en stilte" | Begeleiding door Ank
-  Schravendeel & Arman Maheri Mahani | €20,-
+  Schravendeel & Arman  Ameri Mahani | €22,-
 ---
 # Zingen en mediteren
 
