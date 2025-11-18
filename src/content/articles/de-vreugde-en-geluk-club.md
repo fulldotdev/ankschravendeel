@@ -6,7 +6,7 @@ description: >-
 image:
   src: /images/2-handen-geluk.webp
   alt: De vreugde en geluk club
-published: 2025-06-04T12:00:00Z
+published: 2025-11-15T12:00:00Z
 ---
 # **De Vreugde en Geluk Club**
 
