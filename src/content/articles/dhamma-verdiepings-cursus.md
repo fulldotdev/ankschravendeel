@@ -4,7 +4,7 @@ description: >-
   Ik ben betrokken als kerndocent bij de Dhamma Verdiepings Cursus. De cursus
   bestaat uit 8 weekeinden, over twee jaar
 image:
-  src:
+  src: /images/ontwerp-zonder-titel-1.webp
   alt: Dhamma Verdiepings Cursus, je kunt je opgeven voor de volgende reeks
 published: 2025-06-04T12:00:00Z
 ---
