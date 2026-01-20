@@ -30,7 +30,7 @@ In het Boeddhisme is Verlichting een centraal begrip. Verlichting gaat over held
 
 Ik wens je het herkennen en ervaren van veel heldere en moeiteloze momenten.
 
-![Kaars - Van donker naar licht](/images/kaars-van-donker-naar-licht.jpeg)
+![Kaars - Van donker naar licht](/images/kaars-van-donker-naar-licht.png)
 _Foto: Duisternis en licht_
 
 ---
@@ -60,7 +60,7 @@ Matthijs Schouten (meditatie leraar in de traditie van U Bah Kin) vertelt in een
 
 Tijdens het symposium citeerde één van de inleiders, Erik Borgman, een biologe, Lynn Margulis (Earth System Hypothesis): "De planeet zorgt voor ons. Niet wij voor haar. Ons zelfopgeblazen idee, om de zieke planeet te genezen, getuigt van ons vermogen tot zelfbedrog". We leven vanuit almachtsfantasieën. Veranderlijkheid en vergankelijkheid, onbevredigdheid en oncontroleerbaarheid, dat zijn de kernprincipes van levensprocessen in het Boeddhisme. "Wie denken we wel dat we zijn?" Verantwoordelijkheid nemen voor de ecologische crisis kan heilzaam zijn, als we onze plek weten.
 
-![Transmissietoren met windmolens](/images/transmissietoren-duurzaamheid.jpeg)
+![Transmissietoren met windmolens](/images/transmissietoren-duurzaamheid.png)
 _Duurzame energie en ecologische verantwoordelijkheid_
 
 ---

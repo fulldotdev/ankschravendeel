@@ -31,7 +31,7 @@ Lees meer over deze transitiefase in mijn nieuwsbrief:
 
 #Meditatie #Boeddhisme #Reflectie #Mindfulness #Verlichting
 
-[IMAGE: kaars-van-donker-naar-licht.jpeg]
+[IMAGE: kaars-van-donker-naar-licht.png]
 
 ---
 
@@ -50,4 +50,4 @@ De volledige reflectie op duurzaamheid en geëngageerd Boeddhisme vind je in mij
 
 #Duurzaamheid #Boeddhisme #Ecologie #Verantwoordelijkheid #Bewustzijn
 
-[IMAGE: transmissietoren-duurzaamheid.jpeg]
+[IMAGE: transmissietoren-duurzaamheid.png]
