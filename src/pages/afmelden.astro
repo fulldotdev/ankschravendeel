@@ -1,0 +1,27 @@
+---
+import { AutoForm } from "@/components/auto-form"
+import Layout from "@/components/layout.astro"
+---
+
+<Layout>
+  <section class="mx-auto flex min-h-[60vh] w-full max-w-screen-md items-center justify-center px-4">
+    <div class="flex w-full max-w-2xl flex-col items-start gap-6">
+      <h1 class="text-2xl font-semibold">Afmelden voor nieuwsbrief</h1>
+      <AutoForm
+        client:load
+        name="afmelden-nieuwsbrief"
+        inbox="ankschravendeel"
+        action="/bedankt/"
+        fields={[
+          {
+            name: "email",
+            label: "E-mail",
+            type: "email",
+            required: true,
+          },
+        ]}
+        submit="Afmelden"
+      />
+    </div>
+  </section>
+</Layout>
