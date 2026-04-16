@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content"
+
+import Block from "@/components/block.astro"
+import Layout from "@/components/layout.astro"
+
+export async function getStaticPaths() {
+  const pages = await getCollection("persons")
+  return pages.map((page) => ({
+    params: {
+      page: page.id,
+    },
+    props: page,
+  }))
+}
+
+const { body, ...frontmatter } = Astro.props.data
+const blocks = frontmatter.blocks ?? [
+  {
+    block: "content-1",
+    title: frontmatter.title,
+    description: frontmatter.tagline,
+    image: frontmatter.avatar
+      ? {
+          src: frontmatter.avatar,
+          alt: frontmatter.title,
+        }
+      : undefined,
+    content: body,
+  },
+]
+---
+
+<Layout {...frontmatter}>
+  {blocks.map((block) => <Block {...block} />)}
+</Layout>

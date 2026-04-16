@@ -25,6 +25,10 @@ blocks:
   - block: reviews-1
     content: |
       <h2>Wat anderen zeggen</h2>
+  - block: content-1
+    title: Samenwerking
+    content: >-
+      <p>Ik werk op onderdelen samen met mensen die mijn aanbod verrijken met hun eigen expertise.</p><p><strong>Katleen Janssens</strong> is psycholoog, coach en mindfulnesstrainer. Samen begeleiden we retraites en verdiepende meditatieprogramma's.</p><p><strong>Arman Ameri Mahani</strong> begeleidt samen met mij het aanbod rond zingen en mediteren, met aandacht voor resonantie, verstilling en muzikaliteit.</p><p><a href="/personen/katleen-janssens/">Lees meer over Katleen</a><br /><a href="/personen/arman-ameri-mahani/">Lees meer over Arman</a></p>
   - block: cta-1
     content: >
       <h2>Neem gerust contact met mij op</h2>
