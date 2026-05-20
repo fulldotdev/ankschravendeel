@@ -33,6 +33,24 @@ einde 13 augustus 2026 14 uur
 
 **Kosten**
 
-1 persoons kamer:
+1 persoonskamer:      1077,-
+
+2 persoonskamer:        955,-
+
+drie/vierpersoonskamer:  908,-
+
+eigen tent/caravan/camper:   884,-
+
+**locatie**
+
+"de Maanhoeve" Exloërveen 18a, 9574 PB Exloërveen
+
+https://Maanhoeve.nl
+
+contactpersoon: Ank Schravendeel
+
+06 52624506
+
+&nbsp;
 
 &nbsp;
