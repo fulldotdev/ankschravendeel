@@ -11,11 +11,11 @@ description: |-
 
 &nbsp;
 
-## Voorjaarsretraite
+## Voorjaarsretraite "vol vreugde"
 
 vrijdag 19  tot en met donderdag 25 februari 2027
 
-door Mirjam Schild en Ank Schravendeel
+door Chris Grijns en Ank Schravendeel
 
 in "de Maanhoeve" Exloërveen
 
@@ -23,7 +23,7 @@ in "de Maanhoeve" Exloërveen
 
 ## Zomer retraite
 
-maandag 2 augustus tot en met donderdag 12 augustus2027
+maandag 2 augustus tot en met donderdag 12 augustus 2027
 
 door Katleen Janssens en Ank Schravendeel
 
