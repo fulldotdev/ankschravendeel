@@ -11,25 +11,41 @@ description: >-
 ---
 # Zingen en mediteren
 
-## Zondag 1 maart 2026
-
-## "Stal de Marshoek"  Zwolle
-
 ## Ank Schravendeel en Arman Ameri Mahani
 
 ##
 
-&nbsp;
-
 ## Resonantie en stilte
 
-Voor de derde keer bieden vipassanaleraar Ank Schravendeel en musicus Arman Maheri Mahani een dag Zingen en Mediteren aan in Zwolle.
+Op verschillende plaatsen in het land geven we een dag "zingen en mediteren".
 
 In het programma wisselen klank maken, raga en mantra zingen en zit meditatie elkaar af. Bij het klank maken werken we met verschillende klinkers, die resoneren op verschillende plekken in het lichaam. Ook de klankafstanden kunnen we ervaren, welk verhaal die vertellen. Bij het zingen van een  raga of mantra gaat het niet om het zingen van een lied, maar om de zeggingskracht van de tonen onderling. Zingen geeft expressie, je hoort jezelf en elkaar. Dat geeft harmonie en saamhorigheid. En dat geeft vreugde!
 
-## Programma
+## Data najaar 2026 en voorjaar 2027
 
-**Datum:** zondag 1 maart 2026<br> **Tijd:** 10.00-16.30 (binnenlopen vanaf 9.30)<br> **Locatie:** Stal de Marshoek, Marshoekersteeg 17A, Dalfsen (aan de rand van Zwolle)<br> **Kosten:** €22,- voor de organisatie en zaalhuur
+#### Utrecht (wordt zo snel mogelijk bekend gemaakt)
+
+#### Nijmegen zondag 27 september 2026
+
+aanmelding: helen@helenwerkt.nl
+
+#### Groningen zondag 29 november 2026
+
+aanmelding: aanmelden@vipassana-groningen.nl
+
+#### Rotterdam zondag 7 februari 2027
+
+aanmelding: info@vipassanarotterdam.nl
+
+#### Zwolle zondag 7 maart 2027
+
+aanmelding: Mariet Cuperus mariet@hervind.nl
+
+#### Tilburg zondag 11 april 2027
+
+aanmelding: info@inzichtenbevrijding.nl
+
+&nbsp;
 
 ## Begeleiders
 
@@ -41,12 +57,6 @@ In het programma wisselen klank maken, raga en mantra zingen en zit meditatie el
 
 Meditatie wordt al sinds de tijd van de historische Boeddha doorgegeven in vrijgevigheid. Aan het eind van het programma wordt je uitgenodigd om dana te geven. Dana gaat over d evreugde om een bijdrage te kunnen leveren. In dit geval: om Ank en Arman in staat te stellen deze dagen aan te kunnen bieden. "Als je weinig hebt: geef gul weinig; als je veel hebt: geef gul veel".
 
-## Aanmelden
-
-mail Mariët Cuperus: **mariet@hervind.nl**
-
-onder vermelding van **je naam en "zingend mediteren"**
-
-Je ontvangt dan een bevestiging en de informatie zodat je de organisatiekosten vooraf kunt overmaken.
+##
 
 &nbsp;
