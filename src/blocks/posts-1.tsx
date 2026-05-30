@@ -14,36 +14,17 @@ export interface Posts1Props {
     href?: string
     title?: string
     description?: string
-    published?: Date
+    published?: Date | string
     tags?: string[]
   }[]
 }
 
 export default function Posts1({ children, posts }: Posts1Props) {
-  // Collect all tags from posts, flatten, and deduplicate
   const allTags = posts?.flatMap(({ tags }) => tags)
   const uniqueTags = [...new Set(allTags)].filter((tag) => tag !== undefined)
 
-  // State for the currently active tag filter (null = show all)
-  const [activeTags, setActiveTags] = React.useState<string[]>([])
-
-  // Handler for toggling tag filters
-  const handleTagToggle = (tag: string) => (pressed: boolean) => {
-    setActiveTags(
-      pressed ? [...activeTags, tag] : activeTags.filter((t) => t !== tag)
-    )
-  }
-
-  // Filter posts by active tag, or show all if none selected
-  const filteredPosts = React.useMemo(() => {
-    if (activeTags.length === 0) return posts
-    return posts?.filter((post) =>
-      post.tags?.some((tag) => activeTags.includes(tag))
-    )
-  }, [posts, activeTags])
-
   return (
-    <section className="relative w-full py-16">
+    <section className="relative w-full py-16" data-posts-filterable>
       <div className="mx-auto flex w-full flex-col items-center px-4 md:px-12">
         {children && (
           <Writeup className="text-center" size="4xl">
@@ -57,41 +38,89 @@ export default function Posts1({ children, posts }: Posts1Props) {
                 key={tag}
                 size="sm"
                 variant="outline"
-                onPressedChange={handleTagToggle(tag)}
+                aria-pressed="false"
+                data-post-filter={tag}
               >
                 {tag}
               </Toggle>
             ))}
           </div>
           <div className="mx-auto flex max-w-screen-md flex-col gap-4">
-            {filteredPosts?.map(
-              ({ href, title, description, published, tags }) => (
-                <Tile href={href} key={href}>
-                  {tags && (
-                    <TileHeader className="flex flex-row flex-wrap">
-                      {tags?.map((tag) => (
-                        <Badge variant="secondary" key={tag}>
-                          {tag}
-                        </Badge>
-                      ))}
-                    </TileHeader>
-                  )}
-                  <TileContent>
-                    <Tagline size="xs">
-                      {published?.toLocaleDateString("nl-NL")}
-                    </Tagline>
-                    <Heading as="h3">{title}</Heading>
-                    <Paragraph
-                      className="[&_a]:text-primary [&_a]:underline"
-                      dangerouslySetInnerHTML={{ __html: description ?? "" }}
-                    />
-                  </TileContent>
-                </Tile>
-              )
-            )}
+            {posts?.map(({ href, title, description, published, tags }) => (
+              <Tile key={href} data-post-tags={JSON.stringify(tags ?? [])}>
+                {tags && (
+                  <TileHeader className="flex flex-row flex-wrap">
+                    {tags?.map((tag) => (
+                      <Badge variant="secondary" key={tag}>
+                        {tag}
+                      </Badge>
+                    ))}
+                  </TileHeader>
+                )}
+                <TileContent>
+                  <Tagline size="xs">
+                    {published
+                      ? new Date(published).toLocaleDateString("nl-NL", {
+                          timeZone: "Europe/Amsterdam",
+                        })
+                      : null}
+                  </Tagline>
+                  <Heading as="h3">
+                    <a href={href}>{title}</a>
+                  </Heading>
+                  <Paragraph
+                    className="[&_a]:text-primary [&_a]:underline"
+                    dangerouslySetInnerHTML={{ __html: description ?? "" }}
+                  />
+                </TileContent>
+              </Tile>
+            ))}
           </div>
         </div>
       </div>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+(() => {
+  const initPostFilters = () => {
+    document.querySelectorAll("[data-posts-filterable]").forEach((root) => {
+      if (root.dataset.filtersReady === "true") return
+      root.dataset.filtersReady = "true"
+
+      const buttons = [...root.querySelectorAll("[data-post-filter]")]
+      const cards = [...root.querySelectorAll("[data-post-tags]")]
+
+      const applyFilters = () => {
+        const activeTags = buttons
+          .filter((button) => button.getAttribute("aria-pressed") === "true")
+          .map((button) => button.dataset.postFilter)
+
+        cards.forEach((card) => {
+          const tags = JSON.parse(card.dataset.postTags || "[]")
+          card.hidden =
+            activeTags.length > 0 &&
+            !tags.some((tag) => activeTags.includes(tag))
+        })
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const nextPressed = button.getAttribute("aria-pressed") !== "true"
+
+          button.setAttribute("aria-pressed", String(nextPressed))
+          button.dataset.state = nextPressed ? "on" : "off"
+          applyFilters()
+        })
+      })
+    })
+  }
+
+  initPostFilters()
+  document.addEventListener("astro:page-load", initPostFilters)
+})()
+`,
+        }}
+      />
     </section>
   )
 }

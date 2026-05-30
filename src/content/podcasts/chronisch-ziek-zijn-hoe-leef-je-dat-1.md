@@ -1,6 +1,6 @@
 ---
 tags:
-  - Podcasts
+  - Chronisch ziek zijn
 title: Chronisch ziek zijn - Hoe leef je dat? - Aflevering 1
 description: >
   Ziek worden: er verandert iets in mijn lichaam. We kijken in deze eerste aflevering naar de eerste fase van ziek zijn en ook het onder ogen zien van een diagnose. De schok die we wellicht ervaren.

@@ -1,9 +1,6 @@
 import type { BlockProps } from "@/schemas/block"
 
 import { Button } from "@/components/ui/button"
-import { Heading } from "@/components/ui/heading"
-import { Logo } from "@/components/ui/logo"
-import { Separator } from "@/components/ui/separator"
 import { DrawerMenu } from "@/components/drawer-menu"
 import { NavigationMenu } from "@/components/navigation-menu"
 

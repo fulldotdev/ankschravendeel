@@ -20,5 +20,11 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "stackbit.config.ts",
+    "src/shopify",
+    "src/components/ui/chart.tsx"
+  ]
 }

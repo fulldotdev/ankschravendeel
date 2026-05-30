@@ -1,6 +1,6 @@
 {
   "lang": "nl",
-  "company": "Lorem Ipsum",
+  "company": "Ank Schravendeel",
   "banner": {
     "text": "De gloednieuwe website staat online 🎉",
     "href": "/"
@@ -39,6 +39,10 @@
       {
         "text": "Lezingen",
         "href": "/lezingen/"
+      },
+      {
+        "text": "Podcasts",
+        "href": "/podcasts/"
       },
       {
         "text": "Blog",
@@ -97,6 +101,10 @@
           {
             "text": "Lezingen",
             "href": "/lezingen/"
+          },
+          {
+            "text": "Podcasts",
+            "href": "/podcasts/"
           },
           {
             "text": "Blog",

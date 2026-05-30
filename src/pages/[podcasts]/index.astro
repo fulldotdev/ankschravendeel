@@ -1,0 +1,44 @@
+---
+import Posts1 from "@/blocks/posts-1"
+import { slugs } from "@/data/config.json"
+import type { ItemSchema } from "@/schemas/block"
+import { getCollection } from "astro:content"
+
+import Layout from "@/components/layout.astro"
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: {
+        podcasts: slugs.podcasts,
+      },
+    },
+  ]
+}
+
+const podcasts = (await getCollection("podcasts"))
+  .filter((podcast) => !podcast.data.draft)
+  .map((podcast) => {
+    return {
+      id: podcast.id,
+      ...podcast.data,
+      href: `/${slugs.podcasts}/${podcast.id}/`,
+    } satisfies ItemSchema
+  })
+
+const sortedPodcasts = [...podcasts].sort((a, b) => {
+  const aTime = a.published ? new Date(a.published).getTime() : 0
+  const bTime = b.published ? new Date(b.published).getTime() : 0
+  return bTime - aTime
+})
+---
+
+<Layout
+  title="Podcasts | Ank Schravendeel"
+  description="Podcastafleveringen van Ank Schravendeel, per reeks verzameld."
+>
+  <Posts1 posts={sortedPodcasts}>
+    <h1>Podcasts</h1>
+    <p>Podcastafleveringen, gegroepeerd per reeks.</p>
+  </Posts1>
+</Layout>

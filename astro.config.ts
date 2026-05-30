@@ -37,6 +37,6 @@ export default defineConfig({
   },
   integrations: [robotsTxt(), sitemap(), react(), integration(), favicons()],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as any],
   },
 })

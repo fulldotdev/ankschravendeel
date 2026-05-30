@@ -1,10 +1,12 @@
 ---
 published: 2025-08-04T00:00:00Z
+draft: true
 title: Vipassana tiendaagse zomer retraite
 when: 4 augustus - 14 augustus 2025
 where: De Maanhoeve, Exloërveen 18a, 9574 PB Exloërveen, Drenthe
 description: Begeleiding door Ank Schravendeel & Katleen Janssens
 ---
+
 # 2025
 
 Maandag 4 t/m donderdag 14 augustus 2025 in de Maanhoeve, Exloërveen
@@ -55,10 +57,10 @@ Je kunt mediteren op een kussen of een stoel. Deze zijn aanwezig. Als je liever 
 
 De kosten voor volpension:
 
-* Eénpersoonskamer: €1000,-
-* Gedeelde tweepersoonskamer: €890,-
-* Drie- of vierpersoonskamer: €845,-
-* Tent: €845,-
+- Eénpersoonskamer: €1000,-
+- Gedeelde tweepersoonskamer: €890,-
+- Drie- of vierpersoonskamer: €845,-
+- Tent: €845,-
 
 De begeleiding vindt plaats op basis van dana\*.
 

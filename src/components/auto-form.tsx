@@ -84,7 +84,9 @@ function AutoForm({ inbox, fields, submit, className, ...props }: Props) {
         <input
           type="text"
           name="page"
-          value={typeof window !== "undefined" ? window.location.pathname : ""}
+          defaultValue={
+            typeof window !== "undefined" ? window.location.pathname : ""
+          }
           style={{ display: "none" }}
         />
         {fields?.map(
@@ -100,7 +102,7 @@ function AutoForm({ inbox, fields, submit, className, ...props }: Props) {
           }) =>
             (name || label) && (
               <FormField
-                key={name}
+                key={name || label}
                 control={form.control}
                 name={name || label || ""}
                 render={({ field }) => (
@@ -163,7 +165,6 @@ function AutoForm({ inbox, fields, submit, className, ...props }: Props) {
                                             ))
                                       )
                                     }}
-                                    initialFocus
                                   />
                                 </PopoverContent>
                               </Popover>

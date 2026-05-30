@@ -6,7 +6,9 @@ import { getCollection, render } from "astro:content"
 import Layout from "@/components/layout.astro"
 
 export async function getStaticPaths() {
-  const events = await getCollection("events")
+  const events = (await getCollection("events")).filter(
+    (event) => !event.data.draft
+  )
   return events.map((event) => {
     return {
       params: {
@@ -19,9 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { Content } = await render(Astro.props)
-const {
-  data: { posts, person, ...data },
-} = Astro.props
+const { data } = Astro.props
 ---
 
 <Layout {...data}>

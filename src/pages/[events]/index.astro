@@ -15,14 +15,25 @@ export async function getStaticPaths() {
   ]
 }
 
-const events = (await getCollection("events")).map((event) => {
-  return {
-    ...event.data,
-    href: `/${slugs.events}/${event.id}/`,
-  }
-})
+const events = (await getCollection("events"))
+  .filter((event) => !event.data.draft)
+  .map((event) => {
+    return {
+      ...event.data,
+      href: `/${slugs.events}/${event.id}/`,
+    }
+  })
 ---
 
-<Layout>
-  <Events1 events={events} />
+<Layout
+  title="Agenda | Ank Schravendeel"
+  description="Actuele activiteiten, meditatie-ochtenden, retraites en zingen en mediteren."
+>
+  <Events1 events={events}>
+    <h1>Agenda</h1>
+    <p>
+      Actuele activiteiten, meditatie-ochtenden, retraites en dagen met zingen
+      en mediteren.
+    </p>
+  </Events1>
 </Layout>

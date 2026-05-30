@@ -1,5 +1,5 @@
 ---
 rating: 5
-title: Deelnemer
+title: Deelnemer coaching
 description: "Ik heb nog nooit eerder aan iets meegedaan dat zo simpel was, zo vreselijk confronterend en zo goed."
 ---

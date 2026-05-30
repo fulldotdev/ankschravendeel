@@ -1,5 +1,6 @@
 ---
 published: 2026-02-14T00:00:00Z
+draft: true
 title: Vipassana retraite "vol vreugde"
 when: 14 februari - 19 februari 2026
 where: Abdijhoeve Bethlehem, Doetinchem
@@ -7,14 +8,15 @@ description: >-
   Begeleiding door Chris Grijns & Ank Schravendeel | €712,- 1 persoons kamer met
   eigen sanitair | Met online ontmoetingen vooraf
 ---
+
 # vipassana retraite 6 etmalen
 
 ### thema : Vol Vreugde
 
-* **Datum:** vrijdag 19 tot en met donderdag 25 februari 2027
-* **Locatie:** de Maanhoeve, Exloërveen
-* **Begeleiding:** Ank Schravendeel & Chris Grijns
-* **Online ontmoetingen:**  vooraf op 9 februari,achteraf 9 maart
+- **Datum:** vrijdag 19 tot en met donderdag 25 februari 2027
+- **Locatie:** de Maanhoeve, Exloërveen
+- **Begeleiding:** Ank Schravendeel & Chris Grijns
+- **Online ontmoetingen:** vooraf op 9 februari,achteraf 9 maart
 
 Het thema van de retraite is vreugde, je afstemmen op de natuurlijke levendigheid in jezelf. Voorafgaand aan de retraite verkennen we via online ontmoetingen vreugde in het dagelijks leven. Het idee van deze opzet is dat we elkaar en het thema al hebben leren kennen. De retraite biedt daarna verdieping door het intensieve mediteren.
 
@@ -58,17 +60,17 @@ Matten, meditatiekussens, en stoelen zijn aanwezig. Als je liever een meditatieb
 
 ## Kosten en dana
 
-éénpersoons kamer                            860
+éénpersoons kamer 860
 
-gedeelde tweepersoonskamer           800
+gedeelde tweepersoonskamer 800
 
-drie of vierpersoons kamer                 740
+drie of vierpersoons kamer 740
 
 Je kunt de betaling overmaken op:
 
-* IBAN: NL72 TRIO 0338 4690 87
-* T.n.v.: Stichting Inzichts Meditatie Halsteren
-* Onder vermelding van: 'retraite maanhoeve februari 2027' + je postcode en huisnummer
+- IBAN: NL72 TRIO 0338 4690 87
+- T.n.v.: Stichting Inzichts Meditatie Halsteren
+- Onder vermelding van: 'retraite maanhoeve februari 2027' + je postcode en huisnummer
 
 De begeleiding vindt plaats op basis van dana (vrijgevigheid). De prijs dekt alleen kost en inwoning. Aan het einde van de retraite is er gelegenheid om een vrijwillige bijdrage te doneren aan de leraren.
 
@@ -76,8 +78,8 @@ De begeleiding vindt plaats op basis van dana (vrijgevigheid). De prijs dekt all
 
 Voor vragen kun je contact opnemen met:
 
-* Chris Grijns: chris.grijns@gmail.com \| 06-23242364
-* Ank Schravendeel: welkom@ankschravendeel.nl \| 06-52624506
+- Chris Grijns: chris.grijns@gmail.com \| 06-23242364
+- Ank Schravendeel: welkom@ankschravendeel.nl \| 06-52624506
 
 ## Begeleiding
 

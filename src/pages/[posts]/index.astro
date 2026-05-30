@@ -1,6 +1,7 @@
 ---
 import Posts1 from "@/blocks/posts-1"
 import { slugs } from "@/data/config.json"
+import type { ItemSchema } from "@/schemas/block"
 import { getCollection } from "astro:content"
 
 import { transformEntries } from "@/lib/transform"
@@ -16,16 +17,22 @@ export async function getStaticPaths() {
   ]
 }
 
-const posts = await getCollection("posts")
-const transformedPosts = transformEntries(posts)
+const posts = (await getCollection("posts")).filter((post) => !post.data.draft)
+const transformedPosts = transformEntries(posts) as ItemSchema[]
 
 const sortedPosts = [...transformedPosts].sort((a, b) => {
-  const aTime = a.published ? new Date(a.published as Date).getTime() : 0
-  const bTime = b.published ? new Date(b.published as Date).getTime() : 0
+  const aTime = a.published ? new Date(a.published).getTime() : 0
+  const bTime = b.published ? new Date(b.published).getTime() : 0
   return bTime - aTime
 })
 ---
 
-<Layout>
-  <Posts1 client:load posts={sortedPosts} />
+<Layout
+  title="Lezingen | Ank Schravendeel"
+  description="Lezingen en begeleide meditaties van Ank Schravendeel."
+>
+  <Posts1 posts={sortedPosts}>
+    <h1>Lezingen</h1>
+    <p>Lezingen en begeleide meditaties om thuis terug te luisteren.</p>
+  </Posts1>
 </Layout>

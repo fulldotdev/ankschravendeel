@@ -1,8 +1,5 @@
-import type { BlockProps } from "@/schemas/block"
-
 import { Heading } from "@/components/ui/heading"
 import { Paragraph } from "@/components/ui/paragraph"
-import { Tagline } from "@/components/ui/tagline"
 import { Writeup } from "@/components/ui/writeup"
 
 export interface Events1Props {
@@ -18,10 +15,10 @@ export interface Events1Props {
 }
 
 export default function ({ children, events }: Events1Props) {
-  const sortedEvents = events?.sort(
+  const sortedEvents = [...(events ?? [])].sort(
     (a, b) =>
-      new Date(b.published || new Date()).getTime() -
-      new Date(a.published || new Date()).getTime()
+      new Date(a.published || new Date()).getTime() -
+      new Date(b.published || new Date()).getTime()
   )
   return (
     <section className="relative w-full py-16">

@@ -6,7 +6,9 @@ import { getCollection, render } from "astro:content"
 import Layout from "@/components/layout.astro"
 
 export async function getStaticPaths() {
-  const policies = await getCollection("policies")
+  const policies = (await getCollection("policies")).filter(
+    (policy) => !policy.data.draft
+  )
   return policies.map((policy) => {
     return {
       params: {

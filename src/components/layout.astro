@@ -1,9 +1,7 @@
 ---
-import { slugs } from "@/data/config.json"
 import settings from "@/data/settings.json"
 import type { LayoutSchema } from "@/schemas/layout"
 import { Font } from "astro:assets"
-import { getCollection } from "astro:content"
 
 import "@/styles/globals.css"
 
@@ -14,8 +12,10 @@ import { SEO } from "astro-seo"
 
 type Props = LayoutSchema
 
-const { lang, title, description, image, company, head, body, css } =
+const { lang, title, description, image, company, head, body, css, seo } =
   Astro.props
+const metaTitle = title || seo?.title
+const metaDescription = description || seo?.description
 ---
 
 <!doctype html>
@@ -28,21 +28,21 @@ const { lang, title, description, image, company, head, body, css } =
     <meta name="generator" content={Astro.generator} />
     <SEO
       charset="UTF-8"
-      title={title || undefined}
-      description={description || undefined}
+      title={metaTitle || undefined}
+      description={metaDescription || undefined}
       openGraph={{
         basic: {
-          title: title || "",
+          title: metaTitle || "",
           image: Astro.url.origin + image?.src,
           type: "website",
           url: Astro.url.href,
         },
         image: {
           url: Astro.url.origin + image?.src,
-          alt: image?.alt || title || company || undefined,
+          alt: image?.alt || metaTitle || company || undefined,
         },
         optional: {
-          description: description || undefined,
+          description: metaDescription || undefined,
           siteName: company || undefined,
         },
       }}

@@ -9,7 +9,7 @@ const blockImports = import.meta.glob("../blocks/**/*.tsx", {
 function Blocks({ blocks }: { blocks?: (BlockProps & { block: string })[] }) {
   return (
     <>
-      {blocks?.map(({ block, ...props }, i) => {
+      {blocks?.map(({ block, ...props }) => {
         // Find the block in the blockImports object
         const blockPath = `../blocks/${block}.tsx`
         const blockImport = blockImports[blockPath] as any

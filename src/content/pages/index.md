@@ -55,7 +55,7 @@ blocks:
       - text: Neem contact op
         href: /contact/
 seo:
-  title: Ank Schravendeel | Meditatie, Coaching & Spiritueler Begeleiding
+  title: Ank Schravendeel | Meditatie, Coaching & Spirituele Begeleiding
   description: >-
     Welkom bij Ank Schravendeel. Ontdek professionele begeleiding in Vipassana
     meditatie, coaching en spirituele ontwikkeling. Start uw reis naar
