@@ -1,6 +1,6 @@
 ---
 tags:
-  - Podcasts
+  - Chronisch ziek zijn
 title: Chronisch ziek zijn - Hoe leef je dat? - Aflevering 2
 description: >
   In deze tweede aflevering bespreken we wat er in ons leven gebeurt na het ontvangen van de diagnose. We verkennen welke emoties we tegenkomen en hoe het is om geconfronteerd te worden met onze vergankelijkheid.

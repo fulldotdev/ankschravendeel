@@ -1,5 +1,6 @@
 ---
 title: Neem gerust contact met mij op
+description: Stel je vraag over meditatie, coaching, retraites of zingen en mediteren.
 blocks:
   - block: contact-1
     content: |

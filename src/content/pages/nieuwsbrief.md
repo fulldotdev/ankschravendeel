@@ -1,5 +1,6 @@
 ---
 title: Meld je aan voor de nieuwsbrief
+description: Ontvang updates over meditatie, coaching, retraites en nieuwe activiteiten.
 blocks:
   - block: contact-1
     align: center

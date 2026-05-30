@@ -12,6 +12,7 @@ export const itemSchema = z
     content: z.string(),
     title: z.string(),
     description: z.string(),
+    tagline: z.string(),
     list: z.string().array(),
     socials: z.string().array(),
     buttons: linkSchema.array(),
@@ -19,6 +20,8 @@ export const itemSchema = z
     when: z.string(),
     where: z.string(),
     published: z.date(),
+    draft: z.boolean(),
+    avatar: z.string(),
     person: z.object({
       title: z.string(),
       tagline: z.string(),

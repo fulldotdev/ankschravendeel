@@ -1,5 +1,3 @@
-import type { BlockProps } from "@/schemas/block"
-
 import { Button } from "@/components/ui/button"
 import { Writeup } from "@/components/ui/writeup"
 
@@ -15,7 +13,7 @@ export interface Hero4Props {
   }[]
 }
 
-export default async function ({ children, image, buttons }: Hero4Props) {
+export default function Hero4({ children, image, buttons }: Hero4Props) {
   return (
     <section className="bg-background relative min-h-screen w-full py-16">
       <img className="absolute inset-0 size-full object-cover" {...image} />

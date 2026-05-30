@@ -74,9 +74,8 @@ export default function ({
                   action="/bedankt-voor-je-aanmelding/"
                   fields={[
                     {
-                      name: "email",
-                      placeholder: "Jouw email adres",
                       name: "nieuwsbrief email",
+                      placeholder: "Jouw email adres",
                       type: "email",
                     },
                   ]}

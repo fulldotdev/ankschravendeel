@@ -1,25 +1,19 @@
 ---
-published: 2025-09-01T00:00:00Z
-title: 'save the date: retraites in 2027'
-when: 'zomer retraite:  maandag 2 augustus tot en met donderdag 12 augustus2027'
+published: 2027-02-19T00:00:00Z
+title: "Save the date: retraites in 2027"
+when: "19-25 februari, 2-12 augustus en 1-7 oktober 2027"
 where: '"de Maanhoeve" Exloërveen'
 description: |-
-  begeleiding: 
-  Katleen Janssens en Ank Schravendeel
+  Drie retraites in 2027 bij de Maanhoeve in Exloërveen.
 ---
-# Save the date: retraites 2027
-
-&nbsp;
 
 ## Voorjaarsretraite "vol vreugde"
 
-vrijdag 19  tot en met donderdag 25 februari 2027
+vrijdag 19 tot en met donderdag 25 februari 2027
 
 door Chris Grijns en Ank Schravendeel
 
 in "de Maanhoeve" Exloërveen
-
-&nbsp;
 
 ## Zomer retraite
 
@@ -29,14 +23,10 @@ door Katleen Janssens en Ank Schravendeel
 
 in "de Maanhoeve" Exloërveen
 
-&nbsp;
-
 ## Najaarsretraite
 
-vrijdag 1 oktober tot en met donderdag 7 oktober
+vrijdag 1 oktober tot en met donderdag 7 oktober 2027
 
 door Ank Schravendeel
 
 in "de Maanhoeve" Exloërveen
-
-&nbsp;

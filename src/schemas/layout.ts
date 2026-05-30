@@ -1,5 +1,6 @@
 import { blockSchema } from "@/schemas/block"
 import { imageSchema } from "@/schemas/image"
+import { seoSchema } from "@/schemas/seo"
 import { z } from "zod"
 
 export const layoutSchema = z
@@ -17,6 +18,7 @@ export const layoutSchema = z
     head: z.string(),
     body: z.string(),
     css: z.string(),
+    seo: seoSchema,
   })
   .partial()
   .strict()

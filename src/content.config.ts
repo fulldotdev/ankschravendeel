@@ -1,9 +1,7 @@
-import { defineCollection } from "astro:content"
-import { file, glob } from "astro/loaders"
-
 import { dataSchema } from "@/schemas/data"
-import { layoutSchema } from "@/schemas/layout"
 import { pageSchema } from "@/schemas/page"
+import { defineCollection } from "astro:content"
+import { glob } from "astro/loaders"
 
 export const collections = {
   pages: defineCollection({
@@ -17,6 +15,13 @@ export const collections = {
     loader: glob({
       pattern: "**/[^_]*.{md,mdx}",
       base: "src/content/posts",
+    }),
+    schema: pageSchema,
+  }),
+  podcasts: defineCollection({
+    loader: glob({
+      pattern: "**/[^_]*.{md,mdx}",
+      base: "src/content/podcasts",
     }),
     schema: pageSchema,
   }),

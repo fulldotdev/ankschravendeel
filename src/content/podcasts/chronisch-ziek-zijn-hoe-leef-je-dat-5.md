@@ -1,6 +1,6 @@
 ---
 tags:
-  - Podcasts
+  - Chronisch ziek zijn
 title: Chronisch ziek zijn - Hoe leef je dat? - Aflevering 5
 description: >
   We ronden de podcastreeks af met de winst van ziek zijn: Is er een positieve kant aan het hebben van een chronische ziekte? We verkennen wat we hebben geleerd, hoe het onze kijk op het leven, relaties en zelfzorg heeft veranderd.

@@ -1,5 +1,5 @@
 import { imageSchema } from "@/schemas/image"
-import { reference, z } from "astro:content"
+import { z } from "astro:content"
 
 export const dataSchema = z
   .object({
@@ -8,7 +8,7 @@ export const dataSchema = z
     description: z.string(),
     rating: z.number().min(1).max(5),
     tagline: z.string(),
-    avatar: imageSchema,
+    avatar: z.string(),
     image: imageSchema,
   })
   .partial()

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Podcasts
+  - Op retraite
 title: Podcast op retraite - Aflevering 1
 description: >
   Een nieuwe aflevering uit de podcastreeks over retraite.

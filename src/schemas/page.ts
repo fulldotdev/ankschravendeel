@@ -2,11 +2,13 @@ import { blockSchema } from "@/schemas/block"
 import { imageSchema } from "@/schemas/image"
 import { linkSchema } from "@/schemas/link"
 import { seoSchema } from "@/schemas/seo"
-import { reference, z } from "astro:content"
+import { z } from "astro:content"
 
 export const pageSchema = z
   .object({
     href: z.string(),
+    slug: z.string(),
+    draft: z.boolean(),
     tags: z.string().array(),
     title: z.string(),
     description: z.string(),

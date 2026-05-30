@@ -15,14 +15,25 @@ export async function getStaticPaths() {
   ]
 }
 
-const services = (await getCollection("services")).map((service) => {
-  return {
-    ...service.data,
-    href: `/${slugs.services}/${service.id}/`,
-  }
-})
+const services = (await getCollection("services"))
+  .filter((service) => !service.data.draft)
+  .map((service) => {
+    return {
+      ...service.data,
+      href: `/${slugs.services}/${service.id}/`,
+    }
+  })
 ---
 
-<Layout>
-  <Services1 services={services} />
+<Layout
+  title="Aanbod | Ank Schravendeel"
+  description="Een overzicht van coaching, meditatie, retraites en zingen en mediteren bij Ank Schravendeel."
+>
+  <Services1 services={services}>
+    <h1>Een overzicht van mijn aanbod</h1>
+    <p>
+      Verschillende vormen van begeleiding op het gebied van meditatie en
+      coaching.
+    </p>
+  </Services1>
 </Layout>

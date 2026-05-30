@@ -1,5 +1,5 @@
 ---
-import { type BlockSchema } from "@/schemas/block"
+import { type BlockSchema, type ItemSchema } from "@/schemas/block"
 import { getCollection, getEntries, getEntry } from "astro:content"
 
 import { transformEntries, transformEntry } from "@/lib/transform"
@@ -13,22 +13,50 @@ const { posts, articles, services, events, reviews, person, ...props } =
 const postsEntries = posts
   ? await getEntries(posts)
   : await getCollection("posts")
-const postsTransformed = postsEntries && transformEntries(postsEntries)
+const postsTransformed =
+  postsEntries &&
+  (transformEntries(postsEntries) as ItemSchema[])
+    .filter((entry) => !entry.draft)
+    .sort(
+      (a, b) =>
+        new Date(b.published ?? 0).getTime() -
+        new Date(a.published ?? 0).getTime()
+    )
 
 const articlesEntries = articles
   ? await getEntries(articles)
   : await getCollection("articles")
-const articlesTransformed = articlesEntries && transformEntries(articlesEntries)
+const articlesTransformed =
+  articlesEntries &&
+  (transformEntries(articlesEntries) as ItemSchema[])
+    .filter((entry) => !entry.draft)
+    .sort(
+      (a, b) =>
+        new Date(b.published ?? 0).getTime() -
+        new Date(a.published ?? 0).getTime()
+    )
 
 const servicesEntries = services
   ? await getEntries(services)
   : await getCollection("services")
-const servicesTransformed = servicesEntries && transformEntries(servicesEntries)
+const servicesTransformed =
+  servicesEntries &&
+  (transformEntries(servicesEntries) as ItemSchema[]).filter(
+    (entry) => !entry.draft
+  )
 
 const eventsEntries = events
   ? await getEntries(events)
   : await getCollection("events")
-const eventsTransformed = eventsEntries && transformEntries(eventsEntries)
+const eventsTransformed =
+  eventsEntries &&
+  (transformEntries(eventsEntries) as ItemSchema[])
+    .filter((entry) => !entry.draft)
+    .sort(
+      (a, b) =>
+        new Date(a.published ?? 0).getTime() -
+        new Date(b.published ?? 0).getTime()
+    )
 
 const reviewsEntries = reviews
   ? await getEntries(reviews)

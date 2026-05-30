@@ -1,0 +1,40 @@
+---
+import Content1 from "@/blocks/content-1"
+import { slugs } from "@/data/config.json"
+import { getCollection, render } from "astro:content"
+
+import Layout from "@/components/layout.astro"
+
+export async function getStaticPaths() {
+  const podcasts = (await getCollection("podcasts")).filter(
+    (podcast) => !podcast.data.draft
+  )
+  return podcasts.map((podcast) => {
+    return {
+      params: {
+        podcasts: slugs.podcasts,
+        podcast: podcast.id,
+      },
+      props: podcast,
+    }
+  })
+}
+
+const { href, blocks, ...data } = Astro.props.data
+const { Content } = await render(Astro.props)
+---
+
+<Layout {...data}>
+  <Content1 {...data}>
+    <Content />
+    {
+      href && (
+        <p>
+          <a href={href} target="_blank" rel="noreferrer">
+            Beluister deze aflevering
+          </a>
+        </p>
+      )
+    }
+  </Content1>
+</Layout>

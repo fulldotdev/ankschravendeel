@@ -1,6 +1,6 @@
 ---
 tags:
-  - Podcasts
+  - Chronisch ziek zijn
 title: Chronisch ziek zijn - Hoe leef je dat? - Aflevering 4
 description: >
   De relationele kant van ziek zijn staat in deze vierde aflevering centraal. Chronisch ziek zijn en de omgeving. Ziek zijn doe je niet alleen.
