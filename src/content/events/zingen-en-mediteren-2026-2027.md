@@ -7,7 +7,6 @@ description: >-
   Dagen met zingen en mediteren rond het thema "Resonantie en stilte", begeleid
   door Ank Schravendeel en Arman Ameri Mahani.
 ---
-
 ## Ank Schravendeel en Arman Ameri Mahani
 
 ## Resonantie en stilte
@@ -18,9 +17,7 @@ In het programma wisselen klank maken, raga en mantra zingen en zit meditatie el
 
 ## Data najaar 2026 en voorjaar 2027
 
-#### Utrecht
-
-Datum wordt zo snel mogelijk bekend gemaakt.
+&nbsp;
 
 #### Nijmegen, zondag 27 september 2026
 
@@ -29,6 +26,10 @@ aanmelding: helen@helenwerkt.nl
 #### Groningen, zondag 29 november 2026
 
 aanmelding: aanmelden@vipassana-groningen.nl
+
+#### Utrecht / Zeist, zondag 17 januari 2027
+
+aanmelding: dan.greve@ziggo.nl
 
 #### Rotterdam, zondag 7 februari 2027
 
