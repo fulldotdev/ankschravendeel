@@ -3,7 +3,8 @@ tags:
   - Op retraite
 title: Podcast op retraite - Aflevering 1
 description: >
-  Een nieuwe aflevering uit de podcastreeks over retraite.
+  Maya de Wilde en Ank Schravendeel verkennen hoe het is om een retraite te volgen
+  en hoe het is om een retraite te geven.
 published: 2026-03-15T12:00:00Z
 image:
   src: /images/podcast-op-retraite-aflevering-1.jpg
@@ -14,14 +15,28 @@ image:
   <source src="/podcasts/podcast-op-retraite-aflevering-1.mp3" type="audio/mp3" />
 </audio>
 
-## De taal van handen en voeten
+## Podcastserie: op retraite
 
-Een wijze sjamaan zei: "Er bestaan drie talen in de hele wereld: de taal van stilte, de taal van handen, de taal van woorden".
+![Algemeen beeld bij podcastserie Op retraite](/images/podcast-op-retraite-serie.jpg)
 
-Tijdens een meditatie ochtend delen we de taal van stilte. Tot de vrouw die naast me zit me iets toefluistert. Ze leeft in een wereld vol verwarring en onrust, op zoek naar thuis. Ik wil niet terugpraten tijdens een zitmeditatie… Wat nu? Ik steek mijn hand uit. Ik voel haar hand in de mijne. Na een poosje laat ze me los. Op een zeker moment fluistert ze me iets toe. Ik steek mijn hand uit, zij houdt mijn hand een poosje in de hare.
+Ank Schravendeel beoefent vipassana meditatie vanaf 1988, ze was toen 25. Ze geeft retraites sinds 2007. Er doen de laatste jaren meer jongeren mee aan haar retraites: anderen van eind 20 die ook de stap wagen om intensief te mediteren.
 
-Tijd voor loopmeditatie. Begeleiding geven, woorden over de aandacht bij de voet… Ze verstaat me niet. Ik steek mijn hand uit en alsof ik een dans inzet til ik mijn voet op. Optillen, neerzetten. Zij volgt. Die taal verstaat ze. Na een aantal baantjes stiefelt ze in hoog tempo verder. Ik volg haar tempo. Na het omdraaien is er ruimte om opnieuw in te zetten, optillen, neerzetten. Vrede in iedere stap. Na een aantal baantjes voel ik dat zij een volgende loopoefening inzet: optillen, voortgaan, neerzetten. Zij neemt het initiatief en ik volg.
+Er zijn mensen die vaak terugkomen, anderen komen voor het eerst bij haar meedoen. Wat laat je besluiten om op retraite te gaan?
 
-Wat me bijblijft, is mijn ongemak om de gewoonte los te laten, om niet te praten en geen fysiek contact te maken tijdens meditatie. Ik ben gehecht aan de taal van stilte. Het heeft ook wel grote gevolgen: als ik niet stil ben verstoor ik de anderen in de groep. Maar er was dus nog een taal. De taal van handen en voeten.
+Het grootste cadeau van een intensieve retraite is de stilte. We praten niet met elkaar, los van begeleide meditaties en persoonlijke uitwisselingsgesprekken.
 
-Wat me bijblijft is hoe we elkaar in die taal uitstekend verstonden. Omdat we met handen en voeten met elkaar communiceerden, kon ik haar gewoon laten zijn. En ik voelde grote dankbaarheid voor ons contact.
+Stilte geeft ruimte. In die ruimte wordt duidelijk waar je geest zich gewoonlijk mee vult. De opmerkzaamheid geeft de mogelijkheid om daar patronen in te ontdekken en inzicht te krijgen. Het is een kostbaar cadeau om dat met anderen samen te beleven.
+
+Deze serie podcasts gaat over wat je motiveert om op retraite te gaan en hoe het is om op retraite te zijn. Wat is het effect daarvan in het gewone leven?
+
+Techniek en editing: Arman Amiri Mahani  
+Muziek: Hans de Back, "the health angels"  
+Foto: Pixabay en Arman Amiri Mahani
+
+## Aflevering 1
+
+Maya de Wilde en Ank Schravendeel.
+
+Maya doet vipassana meditatie sinds 6 jaar. Ze is de tel kwijt hoeveel retraites ze heeft gevolgd; dat zijn er dus al een aantal.
+
+Ank en Maya verkennen hoe het is om een retraite te volgen en hoe het is om een retraite te geven.
