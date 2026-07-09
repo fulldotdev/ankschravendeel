@@ -47,11 +47,7 @@ export default function Posts1({ children, posts }: Posts1Props) {
           </div>
           <div className="mx-auto flex max-w-screen-md flex-col gap-4">
             {posts?.map(({ href, title, description, published, tags }) => (
-              <Tile
-                key={href}
-                href={href}
-                data-post-tags={JSON.stringify(tags ?? [])}
-              >
+              <Tile key={href} data-post-tags={JSON.stringify(tags ?? [])}>
                 {tags && (
                   <TileHeader className="flex flex-row flex-wrap">
                     {tags?.map((tag) => (
@@ -69,7 +65,18 @@ export default function Posts1({ children, posts }: Posts1Props) {
                         })
                       : null}
                   </Tagline>
-                  <Heading as="h3">{title}</Heading>
+                  <Heading as="h3">
+                    {href ? (
+                      <a
+                        href={href}
+                        className="hover:text-primary hover:underline"
+                      >
+                        {title}
+                      </a>
+                    ) : (
+                      title
+                    )}
+                  </Heading>
                   <Paragraph
                     className="[&_a]:text-primary [&_a]:underline"
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
