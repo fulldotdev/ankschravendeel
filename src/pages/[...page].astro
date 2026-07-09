@@ -1,19 +1,23 @@
 ---
+import { slugs } from "@/data/config.json"
 import { getCollection } from "astro:content"
 
 import Block from "@/components/block.astro"
 import Layout from "@/components/layout.astro"
 
 export async function getStaticPaths() {
+  const collectionIndexSlugs = new Set(Object.values(slugs))
   const pages = await getCollection("pages")
-  return pages.map((page) => {
-    return {
-      params: {
-        page: page.id === "index" ? undefined : page.id,
-      },
-      props: page,
-    }
-  })
+  return pages
+    .filter((page) => !collectionIndexSlugs.has(page.id))
+    .map((page) => {
+      return {
+        params: {
+          page: page.id === "index" ? undefined : page.id,
+        },
+        props: page,
+      }
+    })
 }
 
 const { blocks, ...data } = Astro.props.data
