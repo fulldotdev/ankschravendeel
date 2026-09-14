@@ -38,7 +38,7 @@ Als ik ga mediteren, de overgang maak naar in contact zijn, begin ik bij het har
 
 In februari geef ik samen met Chris Grijns een retraite over dit thema. We beginnen de retraite al in januari, gezamenlijk, per zoom. Dat is een nieuwe opzet. Om dankbaarheid in ons dagelijkse doen te voeden. En daarna samen de stilte in te gaan.
 
-**Meer informatie:** https://ankschravendeel.nl/agenda/vipassana-retraite/
+**Actuele retraites:** https://ankschravendeel.nl/aanbod/retraite/
 
 ---
 
@@ -54,8 +54,7 @@ Het effect van zingen op het mediteren is levendig. Het lichaam ervaart dat ener
 
 Wil je mee doen?
 
-- **18 oktober** — Nijmegen  
-  https://ankschravendeel.nl/agenda/zingend-mediteren-op-18-oktober-in-nijmegen/
+- **18 oktober** — Nijmegen (deze activiteit is afgelopen)
 
 - **8 november** — Groningen  
   https://vipassana-groningen.nl/

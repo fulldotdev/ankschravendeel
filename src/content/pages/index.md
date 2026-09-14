@@ -15,7 +15,7 @@ blocks:
       alt: Hero
   - block: services-1
     content: |
-      <h2>Een overzicht van mijn aanbod</h2>
+      <h2 id="aanbod">Een overzicht van mijn aanbod</h2>
       <p>
         Verschillende diensten op het gebied van meditatie en coaching
       </p>
