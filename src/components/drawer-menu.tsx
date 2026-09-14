@@ -8,9 +8,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
-interface Props
-  extends React.ComponentProps<typeof Button>,
-    React.ComponentProps<typeof DrawerTrigger> {
+interface Props extends React.ComponentProps<typeof Button> {
   items?: {
     text?: string
     href?: string
