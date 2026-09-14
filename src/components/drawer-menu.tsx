@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button"
 import {
   DrawerContent,
   Drawer as DrawerRoot,
+  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
-interface Props extends React.ComponentProps<typeof Button> {
+interface Props
+  extends Omit<React.ComponentProps<typeof Button>, "asChild" | "children"> {
   items?: {
     text?: string
     href?: string
@@ -19,39 +21,36 @@ interface Props extends React.ComponentProps<typeof Button> {
   }[]
 }
 
-function DrawerMenu({ items, className, ...props }: Props) {
+function DrawerMenu({ items, ...props }: Props) {
   return items ? (
     <DrawerRoot>
       <DrawerTrigger asChild>
-        <Button
-          className={cn("", className)}
-          variant="ghost"
-          size="icon"
-          aria-label="Menu openen"
-          {...props}
-        >
+        <Button variant="ghost" size="icon" aria-label="Menu openen" {...props}>
           <Menu className="size-5 !w-9" />
         </Button>
       </DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent aria-describedby={undefined}>
+        <DrawerTitle className="sr-only">Menu</DrawerTitle>
         <div className="flex flex-col gap-3 overflow-auto p-6">
-          {items?.map(({ text, href, links }) =>
+          {items.map(({ text, href, links }, index) =>
             text || links ? (
               <div
-                className={`flex flex-col gap-3 ${links ? "mt-3" : ""}`}
-                key={href}
+                className={cn("flex flex-col gap-3", links && "mt-3")}
+                key={index}
               >
-                <a
-                  className="text-foreground text-base font-medium hover:underline"
-                  href={href}
-                >
-                  {text}
-                </a>
-                {links?.map(({ text, href }) =>
+                {text && (
+                  <a
+                    className="text-foreground text-base font-medium hover:underline"
+                    href={href}
+                  >
+                    {text}
+                  </a>
+                )}
+                {links?.map(({ text, href }, index) =>
                   text && href ? (
                     <a
                       className="text-muted-foreground hover:text-foreground transition-colors"
-                      key={href}
+                      key={index}
                       href={href}
                     >
                       {text}
