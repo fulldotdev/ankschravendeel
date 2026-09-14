@@ -23,7 +23,7 @@ const imageUrl = image?.src ? new URL(image.src, Astro.site).href : undefined
 <!doctype html>
 <html
   class="layout text-foreground bg-background h-full w-full font-sans text-base scheme-light dark:scheme-dark"
-  lang={lang}
+  lang={lang || "nl"}
 >
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />

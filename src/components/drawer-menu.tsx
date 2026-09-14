@@ -29,6 +29,7 @@ function DrawerMenu({ items, className, ...props }: Props) {
           className={cn("", className)}
           variant="ghost"
           size="icon"
+          aria-label="Menu openen"
           {...props}
         >
           <Menu className="size-5 !w-9" />

@@ -34,6 +34,9 @@ function TileImage({ className, ...props }: React.ComponentProps<"img">) {
   return (
     <img
       data-slot="tile-image"
+      alt=""
+      loading="lazy"
+      decoding="async"
       className={cn(
         "h-auto w-full transition-opacity group-hover:opacity-80",
         className
