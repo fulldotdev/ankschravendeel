@@ -5,6 +5,7 @@ description: >-
   het resoneert in het lichaam, het harmoniseert de geest.
 image:
   src: /images/horen-zingen-en-mediteren-bij-elkaar.jpeg
+  alt: Klankschaal met kloppers naast een Boeddhabeeld
 published: 2025-06-04T12:00:00Z
 ---
 

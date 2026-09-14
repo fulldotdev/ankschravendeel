@@ -5,6 +5,7 @@ description: >-
   van handen, de taal van woorden.
 image:
   src: /images/de-taal-van-handen-en-voeten.jpeg
+  alt: Blote voet op de grond tijdens loopmeditatie
 published: 2025-06-04T12:00:00Z
 ---
 
