@@ -8,7 +8,7 @@ import { defineConfig, fontProviders } from "astro/config"
 import integration from "./src/lib/integration"
 
 export default defineConfig({
-  site: "https://ui.full.dev",
+  site: "https://ankschravendeel.nl",
   experimental: {
     fonts: [
       {

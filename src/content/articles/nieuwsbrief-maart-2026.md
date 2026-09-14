@@ -55,7 +55,7 @@ Omdat er geen haast is wanneer je op retraite bent, omdat er stilte is, omdat je
 
 Ik ben begonnen aan een reeks podcasts met als thema: "Op retraite". De eerste aflevering staat nu op mijn website en komt spoedig op Soundcloud.
 
-https://ankschravendeel.nl/lezingen/podcast-op-retraite-aflevering-1/
+https://ankschravendeel.nl/podcasts/podcast-op-retraite-aflevering-1/
 
 Deze zomer geef ik samen met Katleen Janssens een tiendaagse retraite, van 3 tot en met 13 augustus, in de Maanhoeve:
 https://simsara.nl/sim-retraite/wakker-leven-een-oefening-in-overgave/

@@ -16,7 +16,13 @@ export interface Hero4Props {
 export default function Hero4({ children, image, buttons }: Hero4Props) {
   return (
     <section className="bg-background relative min-h-screen w-full py-16">
-      <img className="absolute inset-0 size-full object-cover" {...image} />
+      <img
+        className="absolute inset-0 size-full object-cover opacity-30"
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+        {...image}
+      />
       <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center px-4 lg:px-8">
         <Writeup className="mb-8 text-center" size="6xl">
           {children}

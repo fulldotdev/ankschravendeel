@@ -75,7 +75,7 @@ Weet je nog hoe het voelt om vrij te zijn? Om helemaal vrij te zijn in wat je aa
 
 Weet je nog hoe het voelt om gelukkig en vrij te zijn tijdens het mediteren, of na een retraite? Als je daar nu op afstemt, hoe voelt dat?
 
-**Lees meer:** https://ankschravendeel.nl/aanbod/de-vreugde-en-geluk-club/
+**Lees meer:** https://ankschravendeel.nl/blog/de-vreugde-en-geluk-club/
 
 ---
 

@@ -64,17 +64,18 @@ export default function ({
               {channels && (
                 <Channels className="not-first:mt-6" {...channels} />
               )}
-              <div className="flex flex-col -space-y-6 not-first:mt-8">
+              <div className="flex flex-col gap-3 not-first:mt-8">
                 <h3 className="text-sm font-medium">
                   Meld je aan voor de nieuwsbrief
                 </h3>
                 <AutoForm
-                  className="not-first:mt-6 [&_button]:-mt-6"
+                  className="gap-3"
                   inbox="ankschravendeel"
                   action="/bedankt-voor-je-aanmelding/"
                   fields={[
                     {
                       name: "nieuwsbrief email",
+                      label: "E-mailadres",
                       placeholder: "Jouw email adres",
                       type: "email",
                     },

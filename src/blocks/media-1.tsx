@@ -21,7 +21,13 @@ export default function ({ children, buttons, image }: BlockProps) {
             ))}
           </div>
         </div>
-        <img className="rounded-lg" {...image} />
+        <img
+          className="rounded-lg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          {...image}
+        />
       </div>
     </section>
   )

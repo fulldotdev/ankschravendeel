@@ -1,5 +1,8 @@
 ---
+import type { ImgHTMLAttributes } from "react"
 import { type BlockSchema, type ItemSchema } from "@/schemas/block"
+import type { ImageMetadata } from "astro"
+import { getImage } from "astro:assets"
 import { getCollection, getEntries, getEntry } from "astro:content"
 
 import { transformEntries, transformEntry } from "@/lib/transform"
@@ -63,6 +66,35 @@ const reviewsEntries = reviews
   : await getCollection("reviews")
 const reviewsTransformed = reviewsEntries && transformEntries(reviewsEntries)
 
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../public/images/*.{jpeg,jpg,png,webp}"
+)
+const imagePath = props.image?.src && `../../public${props.image.src}`
+const imageModule = imagePath && images[imagePath]
+let image: ImgHTMLAttributes<HTMLImageElement> | undefined = props.image
+if (imageModule) {
+  const source = (await imageModule()).default
+  const widths = [480, 768, 1280, 1920].filter((width) => width <= source.width)
+  const variants = await Promise.all(
+    widths.map((width) => getImage({ src: source, width, format: "webp" }))
+  )
+  const fallback =
+    variants.at(-1) || (await getImage({ src: source, format: "webp" }))
+  image = {
+    ...props.image,
+    src: fallback.src,
+    srcSet: variants
+      .map((variant, index) => `${variant.src} ${widths[index]}w`)
+      .join(", "),
+    sizes:
+      props.block === "hero-4"
+        ? "100vw"
+        : "(min-width: 1280px) 576px, (min-width: 768px) 50vw, 100vw",
+    width: fallback.attributes.width,
+    height: fallback.attributes.height,
+  }
+}
+
 const personEntry = person && (await getEntry(person))
 const personTransformed = personEntry && transformEntry(personEntry)
 ---
@@ -76,6 +108,7 @@ const personTransformed = personEntry && transformEntry(personEntry)
   reviews={reviewsTransformed}
   person={personTransformed}
   {...props}
+  image={image}
 >
   <Fragment set:html={Astro.props.content} />
 </ReactBlock>
